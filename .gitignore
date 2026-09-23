@@ -1,0 +1,10 @@
+venv/
+__pycache__/
+*.pyc
+*.pyo
+.streamlit/
+uploads/
+*.log
+measurements_*.csv
+session_*.json
+.agents/skills/developing-with-streamlit
