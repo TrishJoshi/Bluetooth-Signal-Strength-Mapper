@@ -42,6 +42,7 @@ async def scan_ble_devices(
         A list of ScanResult objects, sorted by mean RSSI descending (strongest first).
     """
     rssi_accumulator: dict[str, list[int]] = defaultdict(list)
+    adv_accumulator: dict[str, dict[str, set[str]]] = defaultdict(lambda: defaultdict(set))
     device_names: dict[str, str] = {}
     tx_powers: dict[str, Optional[int]] = {}
 
@@ -52,8 +53,21 @@ async def scan_ble_devices(
         if normalised_filter and not _matches_filter(mac, normalised_filter):
             return
         rssi_accumulator[mac].append(advertisement.rssi)
-        device_names[mac] = device.name or "Unknown"
-        tx_powers[mac] = advertisement.tx_power
+        
+        # Prefer the device name from the current packet, or fall back to previously seen / "Unknown"
+        if device.name:
+            device_names[mac] = device.name
+        elif mac not in device_names:
+            device_names[mac] = "Unknown"
+            
+        if advertisement.tx_power is not None:
+            tx_powers[mac] = advertisement.tx_power
+            
+        # Accumulate raw manufacturer and service data payloads (as hex strings)
+        for cid, data in advertisement.manufacturer_data.items():
+            adv_accumulator[mac][f"Mfg:0x{cid:04x}"].add(data.hex())
+        for uuid, data in advertisement.service_data.items():
+            adv_accumulator[mac][f"Srv:{uuid}"].add(data.hex())
 
     scanner = BleakScanner(detection_callback=on_advertisement)
 
@@ -61,7 +75,7 @@ async def scan_ble_devices(
     await asyncio.sleep(duration_seconds)
     await scanner.stop()
 
-    return _build_results(rssi_accumulator, device_names, tx_powers)
+    return _build_results(rssi_accumulator, device_names, tx_powers, adv_accumulator)
 
 
 def _build_results(

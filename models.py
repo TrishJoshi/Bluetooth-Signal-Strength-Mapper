@@ -45,6 +45,8 @@ class ScanResult:
     rssi_variance: float
     sample_count: int
     tx_power: Optional[int] = None
+    # Hex representation of manufacturer/service data payloads
+    adv_data: dict[str, str] = field(default_factory=dict)
     # Raw readings stored for later analysis; not exported to CSV.
     rssi_readings: list[int] = field(default_factory=list)
 
