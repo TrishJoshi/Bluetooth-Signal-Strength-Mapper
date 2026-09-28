@@ -4,42 +4,26 @@
     "pixels_per_meter": 60.0,
     "cell_size_meters": 1.0
   },
-  "exported_at": "2026-09-28T13:59:00.760403",
+  "exported_at": "2026-09-28T14:11:21.111258",
   "measurements": [
     {
-      "timestamp": "2026-09-28T13:59:00.758402",
+      "timestamp": "2026-09-28T14:10:59.563068",
       "true_grid": {
-        "row": 3,
-        "col": 4
-      },
-      "app_reported_grid": {
         "row": 0,
         "col": 0
+      },
+      "app_reported_grid": {
+        "row": 3,
+        "col": 7
       },
       "scan_duration_seconds": 3.0,
       "notes": "",
       "scan_results": [
         {
-          "mac_address": "4C:FD:8C:E6:CE:8F",
+          "mac_address": "CB:24:9F:EF:51:42",
           "device_name": "Unknown",
-          "rssi_mean": -61,
-          "rssi_median": -61.0,
-          "rssi_variance": 18,
-          "sample_count": 2,
-          "tx_power": null,
-          "adv_data": {
-            "Mfg:0x004c": "0c0e00905695bec6cdecd7f7d871fa0310067e1da5c6cfd8"
-          },
-          "rssi_readings": [
-            -58,
-            -64
-          ]
-        },
-        {
-          "mac_address": "CB:72:8C:AB:0D:72",
-          "device_name": "Unknown",
-          "rssi_mean": -62,
-          "rssi_median": -62.0,
+          "rssi_mean": -44,
+          "rssi_median": -44.0,
           "rssi_variance": 0.0,
           "sample_count": 1,
           "tx_power": null,
@@ -47,212 +31,149 @@
             "Mfg:0x004c": "12020000"
           },
           "rssi_readings": [
-            -62
+            -44
           ]
         },
         {
-          "mac_address": "56:8E:51:1B:30:27",
+          "mac_address": "4C:FD:8C:E6:CE:8F",
           "device_name": "Unknown",
-          "rssi_mean": -67.67,
-          "rssi_median": -68.0,
-          "rssi_variance": 5.47,
-          "sample_count": 6,
-          "tx_power": null,
-          "adv_data": {
-            "Mfg:0x004c": "071901242002f68f11000613e73192de6fa50bc66ad81aa5ed976e"
-          },
-          "rssi_readings": [
-            -68,
-            -66,
-            -70,
-            -70,
-            -64,
-            -68
-          ]
-        },
-        {
-          "mac_address": "EE:CB:D2:71:91:B2",
-          "device_name": "Unknown",
-          "rssi_mean": -70,
-          "rssi_median": -70.0,
-          "rssi_variance": 0.0,
-          "sample_count": 1,
-          "tx_power": null,
-          "adv_data": {
-            "Mfg:0x004c": "12026400"
-          },
-          "rssi_readings": [
-            -70
-          ]
-        },
-        {
-          "mac_address": "65:F4:14:E7:10:61",
-          "device_name": "CMF Buds 2a",
-          "rssi_mean": -73.33,
-          "rssi_median": -72.0,
-          "rssi_variance": 37.33,
-          "sample_count": 3,
-          "tx_power": -9,
-          "adv_data": {
-            "Mfg:0x0ccb": "0101b185ee99e7edb03c",
-            "Srv:0000fe2c-0000-1000-8000-00805f9b34fb": "00505408e1a11011553341417f"
-          },
-          "rssi_readings": [
-            -68,
-            -72,
-            -80
-          ]
-        },
-        {
-          "mac_address": "71:C3:C3:22:3D:C9",
-          "device_name": "Unknown",
-          "rssi_mean": -83,
-          "rssi_median": -83.0,
+          "rssi_mean": -49,
+          "rssi_median": -49.0,
           "rssi_variance": 2,
           "sample_count": 2,
-          "tx_power": 7,
+          "tx_power": 0,
           "adv_data": {
-            "Mfg:0x004c": "0100000000000000000000000080000000,1007321f03784eba98"
+            "Mfg:0x004c": "1006331da5c6cf28"
           },
           "rssi_readings": [
-            -82,
-            -84
+            -48,
+            -50
           ]
         },
         {
           "mac_address": "C3:00:00:1D:31:24",
           "device_name": "Eddystone\u2122",
-          "rssi_mean": -83,
-          "rssi_median": -83.0,
-          "rssi_variance": 50,
+          "rssi_mean": -52,
+          "rssi_median": -52.0,
+          "rssi_variance": 0,
           "sample_count": 2,
           "tx_power": null,
           "adv_data": {
             "Srv:0000feaa-0000-1000-8000-00805f9b34fb": "00e8af774f3518299426a456000000062d9a"
           },
           "rssi_readings": [
-            -78,
-            -88
+            -52,
+            -52
           ]
         },
         {
-          "mac_address": "57:F4:71:21:F8:6C",
+          "mac_address": "C5:26:BB:1C:A7:3D",
           "device_name": "Unknown",
-          "rssi_mean": -84,
-          "rssi_median": -86.0,
-          "rssi_variance": 22,
-          "sample_count": 5,
-          "tx_power": null,
-          "adv_data": {
-            "Mfg:0x004c": "0719010e202baa8f010004296bccf94c92810c4aa06bd2fadf5013,0719010e202baa8f0100046900341f8329a868742dcb0d18823e57"
-          },
-          "rssi_readings": [
-            -86,
-            -88,
-            -86,
-            -84,
-            -76
-          ]
-        },
-        {
-          "mac_address": "DD:92:C0:85:65:24",
-          "device_name": "Unknown",
-          "rssi_mean": -84,
-          "rssi_median": -84.0,
+          "rssi_mean": -60,
+          "rssi_median": -60.0,
           "rssi_variance": 0.0,
           "sample_count": 1,
           "tx_power": null,
           "adv_data": {
-            "Mfg:0x004c": "12023500"
+            "Mfg:0x004c": "12026401"
           },
           "rssi_readings": [
-            -84
+            -60
           ]
         },
         {
-          "mac_address": "C3:00:00:1D:31:23",
-          "device_name": "Eddystone\u2122",
-          "rssi_mean": -87,
-          "rssi_median": -87.0,
-          "rssi_variance": 18,
+          "mac_address": "6A:6F:93:AD:CC:29",
+          "device_name": "Unknown",
+          "rssi_mean": -64.67,
+          "rssi_median": -65.0,
+          "rssi_variance": 20.27,
+          "sample_count": 6,
+          "tx_power": null,
+          "adv_data": {
+            "Mfg:0x004c": "071901242002f68f1100042c1c5a057b303e50a213ea3be98aae94,071901242002f68f110004fe1c9e5b9408ed62ec0c82580cafb0c8"
+          },
+          "rssi_readings": [
+            -60,
+            -64,
+            -66,
+            -60,
+            -66,
+            -72
+          ]
+        },
+        {
+          "mac_address": "17:E8:2E:66:31:36",
+          "device_name": "Unknown",
+          "rssi_mean": -70,
+          "rssi_median": -70.0,
+          "rssi_variance": 5.33,
+          "sample_count": 4,
+          "tx_power": null,
+          "adv_data": {
+            "Srv:0000fcf1-0000-1000-8000-00805f9b34fb": "04e620c4583b5baba959c6d04d9d7fd093927c"
+          },
+          "rssi_readings": [
+            -72,
+            -72,
+            -68,
+            -68
+          ]
+        },
+        {
+          "mac_address": "01:AD:B4:BE:01:D7",
+          "device_name": "Unknown",
+          "rssi_mean": -72,
+          "rssi_median": -72.0,
+          "rssi_variance": 0,
           "sample_count": 2,
           "tx_power": null,
           "adv_data": {
-            "Srv:0000feaa-0000-1000-8000-00805f9b34fb": "00e8af774f3518299426a456000000062d99"
+            "Srv:0000fef3-0000-1000-8000-00805f9b34fb": "4a1723304d48451132697e5ecc08b2c65abcbb0dfcd567d3fd3c90"
           },
           "rssi_readings": [
-            -90,
-            -84
+            -72,
+            -72
+          ]
+        },
+        {
+          "mac_address": "C3:00:00:1D:31:21",
+          "device_name": "Eddystone\u2122",
+          "rssi_mean": -82.67,
+          "rssi_median": -82.0,
+          "rssi_variance": 9.33,
+          "sample_count": 3,
+          "tx_power": null,
+          "adv_data": {
+            "Srv:0000feaa-0000-1000-8000-00805f9b34fb": "00e8af774f3518299426a456000000062d97"
+          },
+          "rssi_readings": [
+            -82,
+            -86,
+            -80
           ]
         },
         {
           "mac_address": "C3:00:00:1D:31:25",
           "device_name": "Eddystone\u2122",
-          "rssi_mean": -89,
-          "rssi_median": -89.0,
-          "rssi_variance": 2,
-          "sample_count": 2,
+          "rssi_mean": -82.67,
+          "rssi_median": -80.0,
+          "rssi_variance": 21.33,
+          "sample_count": 3,
           "tx_power": null,
           "adv_data": {
             "Srv:0000feaa-0000-1000-8000-00805f9b34fb": "00e8af774f3518299426a456000000062d9b"
           },
           "rssi_readings": [
-            -90,
-            -88
-          ]
-        },
-        {
-          "mac_address": "C3:00:00:1D:31:28",
-          "device_name": "Eddystone\u2122",
-          "rssi_mean": -92,
-          "rssi_median": -92.0,
-          "rssi_variance": 0.0,
-          "sample_count": 1,
-          "tx_power": null,
-          "adv_data": {
-            "Srv:0000feaa-0000-1000-8000-00805f9b34fb": "00e8af774f3518299426a456000000062d9e"
-          },
-          "rssi_readings": [
-            -92
-          ]
-        },
-        {
-          "mac_address": "F7:25:A0:A7:59:2C",
-          "device_name": "Unknown",
-          "rssi_mean": -92,
-          "rssi_median": -92.0,
-          "rssi_variance": 0.0,
-          "sample_count": 1,
-          "tx_power": null,
-          "adv_data": {
-            "Mfg:0x004c": "1202a602071106fbdc743037a4c8b4ad05e78f956abace"
-          },
-          "rssi_readings": [
-            -92
-          ]
-        },
-        {
-          "mac_address": "A0:6C:65:3E:2D:D2",
-          "device_name": "Cidron",
-          "rssi_mean": -93.33,
-          "rssi_median": -94.0,
-          "rssi_variance": 1.33,
-          "sample_count": 3,
-          "tx_power": 0,
-          "adv_data": {
-            "Mfg:0x0d00": "a06c653e2dd2"
-          },
-          "rssi_readings": [
-            -92,
-            -94,
-            -94
+            -80,
+            -88,
+            -80
           ]
         },
         {
           "mac_address": "C3:00:00:1D:31:27",
           "device_name": "Eddystone\u2122",
-          "rssi_mean": -94,
-          "rssi_median": -94.0,
+          "rssi_mean": -84,
+          "rssi_median": -84.0,
           "rssi_variance": 0.0,
           "sample_count": 1,
           "tx_power": null,
@@ -260,59 +181,260 @@
             "Srv:0000feaa-0000-1000-8000-00805f9b34fb": "00e8af774f3518299426a456000000062d9d"
           },
           "rssi_readings": [
-            -94
+            -84
+          ]
+        },
+        {
+          "mac_address": "C3:00:00:1D:31:22",
+          "device_name": "Eddystone\u2122",
+          "rssi_mean": -86,
+          "rssi_median": -86.0,
+          "rssi_variance": 8,
+          "sample_count": 2,
+          "tx_power": null,
+          "adv_data": {
+            "Srv:0000feaa-0000-1000-8000-00805f9b34fb": "00e8af774f3518299426a456000000062d98"
+          },
+          "rssi_readings": [
+            -88,
+            -84
+          ]
+        },
+        {
+          "mac_address": "E4:15:F6:61:D3:55",
+          "device_name": "Cidron",
+          "rssi_mean": -86,
+          "rssi_median": -86.0,
+          "rssi_variance": 4,
+          "sample_count": 3,
+          "tx_power": 0,
+          "adv_data": {
+            "Mfg:0x0d00": "e415f661d355"
+          },
+          "rssi_readings": [
+            -84,
+            -86,
+            -88
           ]
         },
         {
           "mac_address": "38:0B:3C:ED:76:10",
           "device_name": "Cidron",
-          "rssi_mean": -96,
-          "rssi_median": -96.0,
-          "rssi_variance": 0,
-          "sample_count": 3,
+          "rssi_mean": -87.2,
+          "rssi_median": -88.0,
+          "rssi_variance": 9.2,
+          "sample_count": 5,
           "tx_power": 0,
           "adv_data": {
             "Mfg:0x0d00": "380b3ced7610"
           },
           "rssi_readings": [
+            -90,
+            -88,
+            -84,
+            -90,
+            -84
+          ]
+        },
+        {
+          "mac_address": "C3:00:00:1D:31:23",
+          "device_name": "Eddystone\u2122",
+          "rssi_mean": -88,
+          "rssi_median": -88.0,
+          "rssi_variance": 0.0,
+          "sample_count": 1,
+          "tx_power": null,
+          "adv_data": {
+            "Srv:0000feaa-0000-1000-8000-00805f9b34fb": "00e8af774f3518299426a456000000062d99"
+          },
+          "rssi_readings": [
+            -88
+          ]
+        },
+        {
+          "mac_address": "70:39:5E:0B:BD:A2",
+          "device_name": "Unknown",
+          "rssi_mean": -90,
+          "rssi_median": -90.0,
+          "rssi_variance": 0,
+          "sample_count": 3,
+          "tx_power": 9,
+          "adv_data": {
+            "Mfg:0x004c": "10050c18a5c8fc"
+          },
+          "rssi_readings": [
+            -90,
+            -90,
+            -90
+          ]
+        },
+        {
+          "mac_address": "C3:00:00:1D:31:28",
+          "device_name": "Eddystone\u2122",
+          "rssi_mean": -90,
+          "rssi_median": -90.0,
+          "rssi_variance": 0,
+          "sample_count": 2,
+          "tx_power": null,
+          "adv_data": {
+            "Srv:0000feaa-0000-1000-8000-00805f9b34fb": "00e8af774f3518299426a456000000062d9e"
+          },
+          "rssi_readings": [
+            -90,
+            -90
+          ]
+        },
+        {
+          "mac_address": "1A:FD:E4:CA:AD:A2",
+          "device_name": "Unknown",
+          "rssi_mean": -90,
+          "rssi_median": -90.0,
+          "rssi_variance": 0.0,
+          "sample_count": 1,
+          "tx_power": null,
+          "adv_data": {
+            "Srv:0000fef3-0000-1000-8000-00805f9b34fb": "4a172353424b5111324b5ddf1f4f118d20694b527740e33aec2abf"
+          },
+          "rssi_readings": [
+            -90
+          ]
+        },
+        {
+          "mac_address": "A0:6C:65:3E:2D:D2",
+          "device_name": "Cidron",
+          "rssi_mean": -90.5,
+          "rssi_median": -90.0,
+          "rssi_variance": 27.67,
+          "sample_count": 4,
+          "tx_power": 0,
+          "adv_data": {
+            "Mfg:0x0d00": "a06c653e2dd2"
+          },
+          "rssi_readings": [
+            -86,
+            -94,
             -96,
+            -86
+          ]
+        },
+        {
+          "mac_address": "4B:4E:2C:37:9A:9C",
+          "device_name": "Unknown",
+          "rssi_mean": -92,
+          "rssi_median": -90.0,
+          "rssi_variance": 12,
+          "sample_count": 3,
+          "tx_power": 12,
+          "adv_data": {
+            "Mfg:0x004c": "1007341f2d1bd18778"
+          },
+          "rssi_readings": [
             -96,
-            -96
+            -90,
+            -90
+          ]
+        },
+        {
+          "mac_address": "D9:D7:2E:4E:7F:F5",
+          "device_name": "Unknown",
+          "rssi_mean": -92,
+          "rssi_median": -92.0,
+          "rssi_variance": 0.0,
+          "sample_count": 1,
+          "tx_power": null,
+          "adv_data": {
+            "Mfg:0x004c": "12020003"
+          },
+          "rssi_readings": [
+            -92
+          ]
+        },
+        {
+          "mac_address": "F8:30:02:33:27:91",
+          "device_name": "Cidron",
+          "rssi_mean": -94,
+          "rssi_median": -94.0,
+          "rssi_variance": 0.0,
+          "sample_count": 1,
+          "tx_power": 0,
+          "adv_data": {
+            "Mfg:0x0d00": "f83002332791"
+          },
+          "rssi_readings": [
+            -94
           ]
         },
         {
           "mac_address": "E4:15:F6:61:D3:A0",
           "device_name": "Cidron",
-          "rssi_mean": -96,
-          "rssi_median": -96.0,
-          "rssi_variance": 0.0,
-          "sample_count": 1,
+          "rssi_mean": -94,
+          "rssi_median": -94.0,
+          "rssi_variance": 0,
+          "sample_count": 2,
           "tx_power": 0,
           "adv_data": {
             "Mfg:0x0d00": "e415f661d3a0"
           },
           "rssi_readings": [
+            -94,
+            -94
+          ]
+        },
+        {
+          "mac_address": "60:62:67:7F:55:C5",
+          "device_name": "Unknown",
+          "rssi_mean": -94.5,
+          "rssi_median": -94.0,
+          "rssi_variance": 1,
+          "sample_count": 4,
+          "tx_power": 12,
+          "adv_data": {
+            "Mfg:0x004c": "1005331c80dd50"
+          },
+          "rssi_readings": [
+            -94,
+            -94,
+            -94,
             -96
           ]
         },
         {
-          "mac_address": "67:CF:99:8E:E6:08",
-          "device_name": "Unknown",
-          "rssi_mean": -96,
+          "mac_address": "C3:00:00:1D:31:26",
+          "device_name": "Eddystone\u2122",
+          "rssi_mean": -94.67,
           "rssi_median": -96.0,
-          "rssi_variance": 8,
-          "sample_count": 2,
-          "tx_power": 17,
+          "rssi_variance": 17.33,
+          "sample_count": 3,
+          "tx_power": null,
           "adv_data": {
-            "Mfg:0x004c": "10050e1815c2a8"
+            "Srv:0000feaa-0000-1000-8000-00805f9b34fb": "00e8af774f3518299426a456000000062d9c"
           },
           "rssi_readings": [
-            -94,
-            -98
+            -96,
+            -98,
+            -90
           ]
         },
         {
-          "mac_address": "E5:AF:12:9A:0F:25",
+          "mac_address": "20:70:3C:29:4B:0A",
+          "device_name": "Unknown",
+          "rssi_mean": -95,
+          "rssi_median": -95.0,
+          "rssi_variance": 6.67,
+          "sample_count": 4,
+          "tx_power": null,
+          "adv_data": {
+            "Srv:0000fcf1-0000-1000-8000-00805f9b34fb": "04bd9d3e4b6b81e59b2117e78b1f3d3295b74e"
+          },
+          "rssi_readings": [
+            -98,
+            -94,
+            -96,
+            -92
+          ]
+        },
+        {
+          "mac_address": "F8:00:6D:DC:48:0B",
           "device_name": "Unknown",
           "rssi_mean": -96,
           "rssi_median": -96.0,
@@ -327,94 +449,75 @@
           ]
         },
         {
-          "mac_address": "50:67:DC:94:5F:39",
+          "mac_address": "7F:A5:C4:33:93:96",
+          "device_name": "CINDYNYOGA",
+          "rssi_mean": -98,
+          "rssi_median": -98.0,
+          "rssi_variance": 0.0,
+          "sample_count": 1,
+          "tx_power": null,
+          "adv_data": {},
+          "rssi_readings": [
+            -98
+          ]
+        },
+        {
+          "mac_address": "2F:32:05:DA:D0:4E",
           "device_name": "Unknown",
-          "rssi_mean": -96.5,
-          "rssi_median": -96.0,
-          "rssi_variance": 6.33,
-          "sample_count": 4,
-          "tx_power": 17,
+          "rssi_mean": -98,
+          "rssi_median": -98.0,
+          "rssi_variance": 0.0,
+          "sample_count": 1,
+          "tx_power": null,
           "adv_data": {
-            "Mfg:0x004c": "10060e1d40a94448"
+            "Srv:0000fef3-0000-1000-8000-00805f9b34fb": "4a172353424b5111324b5ddf1f4f118d20694b527740e33aec2abf023fa0177041bdb6d17027441f2bc74a6460745c647bab2faede04f77c359d6211c5cb5d8415051d1f00841506611f008415047f1f00841507611f00831501099e"
           },
           "rssi_readings": [
-            -94,
-            -96,
+            -98
+          ]
+        },
+        {
+          "mac_address": "76:9B:D0:C4:38:3C",
+          "device_name": "Unknown",
+          "rssi_mean": -98,
+          "rssi_median": -98.0,
+          "rssi_variance": 8,
+          "sample_count": 2,
+          "tx_power": null,
+          "adv_data": {
+            "Mfg:0x004c": "07190124200b998f100005a87d8e14cbb8210cc19aaef528e2f120"
+          },
+          "rssi_readings": [
             -100,
             -96
           ]
         },
         {
-          "mac_address": "C3:00:00:1D:31:22",
+          "mac_address": "C3:00:00:1D:31:20",
           "device_name": "Eddystone\u2122",
-          "rssi_mean": -97,
-          "rssi_median": -97.0,
+          "rssi_mean": -99,
+          "rssi_median": -99.0,
           "rssi_variance": 2,
           "sample_count": 2,
           "tx_power": null,
           "adv_data": {
-            "Srv:0000feaa-0000-1000-8000-00805f9b34fb": "00e8af774f3518299426a456000000062d98"
+            "Srv:0000feaa-0000-1000-8000-00805f9b34fb": "00e8af774f3518299426a456000000062d96"
           },
           "rssi_readings": [
             -98,
-            -96
+            -100
           ]
         },
         {
-          "mac_address": "C5:F6:65:97:6A:59",
+          "mac_address": "5B:0F:7A:BA:A0:0B",
           "device_name": "Unknown",
-          "rssi_mean": -98,
-          "rssi_median": -98.0,
-          "rssi_variance": 0.0,
-          "sample_count": 1,
-          "tx_power": null,
-          "adv_data": {
-            "Mfg:0x004c": "12023c02"
-          },
-          "rssi_readings": [
-            -98
-          ]
-        },
-        {
-          "mac_address": "FB:33:4D:E0:9A:1C",
-          "device_name": "Unknown",
-          "rssi_mean": -98,
-          "rssi_median": -98.0,
-          "rssi_variance": 0.0,
-          "sample_count": 1,
-          "tx_power": null,
-          "adv_data": {
-            "Mfg:0x004c": "12020000"
-          },
-          "rssi_readings": [
-            -98
-          ]
-        },
-        {
-          "mac_address": "C3:00:00:1D:31:21",
-          "device_name": "Eddystone\u2122",
-          "rssi_mean": -98,
-          "rssi_median": -98.0,
-          "rssi_variance": 0.0,
-          "sample_count": 1,
-          "tx_power": null,
-          "adv_data": {
-            "Srv:0000feaa-0000-1000-8000-00805f9b34fb": "00e8af774f3518299426a456000000062d97"
-          },
-          "rssi_readings": [
-            -98
-          ]
-        },
-        {
-          "mac_address": "C3:00:00:1D:31:26",
-          "device_name": "Eddystone\u2122",
           "rssi_mean": -99,
           "rssi_median": -99.0,
           "rssi_variance": 18,
           "sample_count": 2,
-          "tx_power": null,
+          "tx_power": 12,
           "adv_data": {
-            "Srv:0000feaa-0000-1000-8000-00805f9b34fb": "00e8af774f3518299426a456000000062d9c"
+            "Mfg:0x004c": "1007311fb6db7e2638"
           },
           "rssi_readings": [
             -102,
@@ -422,54 +525,124 @@
           ]
         },
         {
-          "mac_address": "4D:1A:5C:6E:7C:94",
-          "device_name": "Unknown",
-          "rssi_mean": -101.33,
-          "rssi_median": -104.0,
-          "rssi_variance": 41.33,
-          "sample_count": 3,
-          "tx_power": 11,
-          "adv_data": {
-            "Mfg:0x004c": "1006361e664674fb"
-          },
-          "rssi_readings": [
-            -104,
-            -106,
-            -94
-          ]
-        },
-        {
-          "mac_address": "E4:15:F6:61:D3:55",
-          "device_name": "Cidron",
-          "rssi_mean": -102,
-          "rssi_median": -102.0,
-          "rssi_variance": 0.0,
-          "sample_count": 1,
+          "mac_address": "C3:00:00:1D:31:4D",
+          "device_name": "Eddystone\u2122",
+          "rssi_mean": -99.5,
+          "rssi_median": -100.0,
+          "rssi_variance": 1,
+          "sample_count": 4,
           "tx_power": null,
           "adv_data": {
-            "Mfg:0x0d00": "e415f661d355"
+            "Srv:0000feaa-0000-1000-8000-00805f9b34fb": "00e8af774f3518299426a456000000062dc3"
           },
           "rssi_readings": [
-            -102
+            -98,
+            -100,
+            -100,
+            -100
           ]
         },
         {
-          "mac_address": "41:88:8C:B3:2D:BA",
+          "mac_address": "42:3B:2C:52:5F:03",
           "device_name": "Unknown",
-          "rssi_mean": -102,
-          "rssi_median": -102.0,
+          "rssi_mean": -100,
+          "rssi_median": -100.0,
           "rssi_variance": 0.0,
           "sample_count": 1,
           "tx_power": 12,
           "adv_data": {
-            "Mfg:0x004c": "1006311a0dd16452"
+            "Mfg:0x004c": "1006311e2297fdd5"
           },
           "rssi_readings": [
+            -100
+          ]
+        },
+        {
+          "mac_address": "94:A9:A8:31:80:D7",
+          "device_name": "Unknown",
+          "rssi_mean": -100.4,
+          "rssi_median": -100.0,
+          "rssi_variance": 2.8,
+          "sample_count": 5,
+          "tx_power": null,
+          "adv_data": {
+            "Mfg:0x0d00": "94a9a83180d7"
+          },
+          "rssi_readings": [
+            -102,
+            -98,
+            -102,
+            -100,
+            -100
+          ]
+        },
+        {
+          "mac_address": "C3:00:00:1D:31:29",
+          "device_name": "Eddystone\u2122",
+          "rssi_mean": -100.67,
+          "rssi_median": -100.0,
+          "rssi_variance": 1.33,
+          "sample_count": 3,
+          "tx_power": null,
+          "adv_data": {
+            "Srv:0000feaa-0000-1000-8000-00805f9b34fb": "00e8af774f3518299426a456000000062d9f"
+          },
+          "rssi_readings": [
+            -102,
+            -100,
+            -100
+          ]
+        },
+        {
+          "mac_address": "68:B3:B5:59:FF:05",
+          "device_name": "Unknown",
+          "rssi_mean": -101,
+          "rssi_median": -101.0,
+          "rssi_variance": 2,
+          "sample_count": 2,
+          "tx_power": 12,
+          "adv_data": {
+            "Mfg:0x004c": "1006361e5326cd38"
+          },
+          "rssi_readings": [
+            -102,
+            -100
+          ]
+        },
+        {
+          "mac_address": "59:5D:0A:6E:6C:2E",
+          "device_name": "Unknown",
+          "rssi_mean": -101,
+          "rssi_median": -101.0,
+          "rssi_variance": 2,
+          "sample_count": 2,
+          "tx_power": 7,
+          "adv_data": {
+            "Mfg:0x004c": "100528182a39e4"
+          },
+          "rssi_readings": [
+            -100,
             -102
           ]
         },
         {
-          "mac_address": "38:BA:A0:2A:94:D7",
+          "mac_address": "F8:30:02:33:29:09",
+          "device_name": "Unknown",
+          "rssi_mean": -101,
+          "rssi_median": -101.0,
+          "rssi_variance": 2,
+          "sample_count": 2,
+          "tx_power": null,
+          "adv_data": {
+            "Mfg:0x0d00": "f83002332909"
+          },
+          "rssi_readings": [
+            -100,
+            -102
+          ]
+        },
+        {
+          "mac_address": "F7:1E:2D:1B:B4:C7",
           "device_name": "Unknown",
           "rssi_mean": -102,
           "rssi_median": -102.0,
@@ -477,14 +650,75 @@
           "sample_count": 1,
           "tx_power": null,
           "adv_data": {
-            "Srv:0000fef3-0000-1000-8000-00805f9b34fb": "4a17235a595130113230a49fc60fa8ce952c94b288a07d4aa42abf023fa017e2be07e3ae74c79729db02355ca14194e1f438d9eacf379ecf95fb017277021f8415051d1f00841506611f008415047f1f00841507611f00831501099e"
+            "Mfg:0x004c": "12020000"
           },
           "rssi_readings": [
             -102
           ]
         },
         {
-          "mac_address": "E5:48:C7:15:1E:3D",
+          "mac_address": "E8:90:C2:5D:22:AA",
+          "device_name": "Unknown",
+          "rssi_mean": -102,
+          "rssi_median": -102.0,
+          "rssi_variance": 0.0,
+          "sample_count": 1,
+          "tx_power": null,
+          "adv_data": {
+            "Mfg:0x004c": "12020001"
+          },
+          "rssi_readings": [
+            -102
+          ]
+        },
+        {
+          "mac_address": "51:33:9C:A5:94:DB",
+          "device_name": "Unknown",
+          "rssi_mean": -102,
+          "rssi_median": -102.0,
+          "rssi_variance": 0.0,
+          "sample_count": 1,
+          "tx_power": null,
+          "adv_data": {
+            "Mfg:0x012d": "04000202b0320901cabfe1de9400020033230000",
+            "Mfg:0xca0d": "5702e981a72f"
+          },
+          "rssi_readings": [
+            -102
+          ]
+        },
+        {
+          "mac_address": "E4:06:FE:BD:34:A4",
+          "device_name": "Unknown",
+          "rssi_mean": -102,
+          "rssi_median": -102.0,
+          "rssi_variance": 0.0,
+          "sample_count": 1,
+          "tx_power": null,
+          "adv_data": {
+            "Mfg:0x0075": "42098102141504210149f517011805bcd52000000000e300"
+          },
+          "rssi_readings": [
+            -102
+          ]
+        },
+        {
+          "mac_address": "42:AF:A8:FF:A6:89",
+          "device_name": "Unknown",
+          "rssi_mean": -104,
+          "rssi_median": -104.0,
+          "rssi_variance": 0.0,
+          "sample_count": 1,
+          "tx_power": 12,
+          "adv_data": {
+            "Mfg:0x004c": "1007301f820b4c6538"
+          },
+          "rssi_readings": [
+            -104
+          ]
+        },
+        {
+          "mac_address": "D9:63:8F:C5:ED:3D",
           "device_name": "Unknown",
           "rssi_mean": -104,
           "rssi_median": -104.0,
@@ -492,14 +726,14 @@
           "sample_count": 1,
           "tx_power": null,
           "adv_data": {
-            "Mfg:0x004c": "12020000"
+            "Mfg:0x004c": "12020003"
           },
           "rssi_readings": [
             -104
           ]
         },
         {
-          "mac_address": "DD:AD:DE:BB:D8:60",
+          "mac_address": "30:E5:6C:E4:5A:EC",
           "device_name": "Unknown",
           "rssi_mean": -104,
           "rssi_median": -104.0,
@@ -507,44 +741,29 @@
           "sample_count": 1,
           "tx_power": null,
           "adv_data": {
-            "Mfg:0x004c": "12020000"
+            "Srv:0000fef3-0000-1000-8000-00805f9b34fb": "4a172344544432113252221515ceb338fc60f09ea2f14e861b9df1"
           },
           "rssi_readings": [
             -104
           ]
         },
         {
-          "mac_address": "0A:3A:4B:EB:13:EB",
+          "mac_address": "6F:F3:82:C3:52:5D",
           "device_name": "Unknown",
-          "rssi_mean": -104,
-          "rssi_median": -104.0,
+          "rssi_mean": -106,
+          "rssi_median": -106.0,
           "rssi_variance": 0.0,
           "sample_count": 1,
-          "tx_power": null,
+          "tx_power": 8,
           "adv_data": {
-            "Mfg:0x0006": "010f202225fc80c5b6e49e774360f41b04489b55f35be6c663c12e"
+            "Mfg:0x004c": "1006311eb575dcd1"
           },
           "rssi_readings": [
-            -104
+            -106
           ]
         },
         {
-          "mac_address": "30:BB:06:81:52:5D",
-          "device_name": "Unknown",
-          "rssi_mean": -104,
-          "rssi_median": -104.0,
-          "rssi_variance": 0.0,
-          "sample_count": 1,
-          "tx_power": null,
-          "adv_data": {
-            "Srv:0000fcf1-0000-1000-8000-00805f9b34fb": "04a34a906ac1e28beb66a1e8e1a911df5ab4da"
-          },
-          "rssi_readings": [
-            -104
-          ]
-        },
-        {
-          "mac_address": "94:A9:A8:31:80:D7",
+          "mac_address": "30:AE:A4:60:58:FA",
           "device_name": "Unknown",
           "rssi_mean": -106,
           "rssi_median": -106.0,
@@ -552,10 +771,789 @@
           "sample_count": 1,
           "tx_power": null,
           "adv_data": {
-            "Mfg:0x0d00": "94a9a83180d7"
+            "Mfg:0xffff": "30aea46058fa"
           },
           "rssi_readings": [
             -106
+          ]
+        },
+        {
+          "mac_address": "F8:30:02:33:24:FF",
+          "device_name": "Unknown",
+          "rssi_mean": -106,
+          "rssi_median": -106.0,
+          "rssi_variance": 0.0,
+          "sample_count": 1,
+          "tx_power": null,
+          "adv_data": {
+            "Mfg:0x0d00": "f830023324ff"
+          },
+          "rssi_readings": [
+            -106
+          ]
+        },
+        {
+          "mac_address": "C3:00:00:1D:31:2A",
+          "device_name": "Eddystone\u2122",
+          "rssi_mean": -106,
+          "rssi_median": -106.0,
+          "rssi_variance": 0.0,
+          "sample_count": 1,
+          "tx_power": null,
+          "adv_data": {
+            "Srv:0000feaa-0000-1000-8000-00805f9b34fb": "00e8af774f3518299426a456000000062da0"
+          },
+          "rssi_readings": [
+            -106
+          ]
+        }
+      ]
+    },
+    {
+      "timestamp": "2026-09-28T14:11:21.107732",
+      "true_grid": {
+        "row": 1,
+        "col": 0
+      },
+      "app_reported_grid": {
+        "row": 2,
+        "col": 2
+      },
+      "scan_duration_seconds": 3.0,
+      "notes": "",
+      "scan_results": [
+        {
+          "mac_address": "C3:00:00:1D:31:24",
+          "device_name": "Eddystone\u2122",
+          "rssi_mean": -52,
+          "rssi_median": -52.0,
+          "rssi_variance": 0.0,
+          "sample_count": 1,
+          "tx_power": null,
+          "adv_data": {
+            "Srv:0000feaa-0000-1000-8000-00805f9b34fb": "00e8af774f3518299426a456000000062d9a"
+          },
+          "rssi_readings": [
+            -52
+          ]
+        },
+        {
+          "mac_address": "4C:FD:8C:E6:CE:8F",
+          "device_name": "Unknown",
+          "rssi_mean": -55.6,
+          "rssi_median": -56.0,
+          "rssi_variance": 160.8,
+          "sample_count": 5,
+          "tx_power": 0,
+          "adv_data": {
+            "Mfg:0x004c": "10067b1da5c6cfd8"
+          },
+          "rssi_readings": [
+            -76,
+            -44,
+            -46,
+            -56,
+            -56
+          ]
+        },
+        {
+          "mac_address": "6A:6F:93:AD:CC:29",
+          "device_name": "Unknown",
+          "rssi_mean": -61.5,
+          "rssi_median": -62.0,
+          "rssi_variance": 15.71,
+          "sample_count": 8,
+          "tx_power": null,
+          "adv_data": {
+            "Mfg:0x004c": "071901242002f68f1100043ad9ae95c381e68d8d76f6de9b658395,071901242002f68f110004588c6ccff5f587ebdbedc69be7e54418"
+          },
+          "rssi_readings": [
+            -58,
+            -58,
+            -56,
+            -64,
+            -64,
+            -66,
+            -66,
+            -60
+          ]
+        },
+        {
+          "mac_address": "01:AD:B4:BE:01:D7",
+          "device_name": "Unknown",
+          "rssi_mean": -72,
+          "rssi_median": -72.0,
+          "rssi_variance": 8,
+          "sample_count": 2,
+          "tx_power": null,
+          "adv_data": {
+            "Srv:0000fef3-0000-1000-8000-00805f9b34fb": "4a1723304d48451132697e5ecc08b2c65abcbb0dfcd567d3fd3c90"
+          },
+          "rssi_readings": [
+            -70,
+            -74
+          ]
+        },
+        {
+          "mac_address": "17:E8:2E:66:31:36",
+          "device_name": "Unknown",
+          "rssi_mean": -76,
+          "rssi_median": -72.0,
+          "rssi_variance": 62,
+          "sample_count": 5,
+          "tx_power": null,
+          "adv_data": {
+            "Srv:0000fcf1-0000-1000-8000-00805f9b34fb": "04e620c4583b5baba959c6d04d9d7fd093927c"
+          },
+          "rssi_readings": [
+            -72,
+            -90,
+            -74,
+            -72,
+            -72
+          ]
+        },
+        {
+          "mac_address": "C3:00:00:1D:31:25",
+          "device_name": "Eddystone\u2122",
+          "rssi_mean": -82.67,
+          "rssi_median": -82.0,
+          "rssi_variance": 25.33,
+          "sample_count": 3,
+          "tx_power": null,
+          "adv_data": {
+            "Srv:0000feaa-0000-1000-8000-00805f9b34fb": "00e8af774f3518299426a456000000062d9b"
+          },
+          "rssi_readings": [
+            -82,
+            -88,
+            -78
+          ]
+        },
+        {
+          "mac_address": "C3:00:00:1D:31:22",
+          "device_name": "Eddystone\u2122",
+          "rssi_mean": -84,
+          "rssi_median": -84.0,
+          "rssi_variance": 0.0,
+          "sample_count": 1,
+          "tx_power": null,
+          "adv_data": {
+            "Srv:0000feaa-0000-1000-8000-00805f9b34fb": "00e8af774f3518299426a456000000062d98"
+          },
+          "rssi_readings": [
+            -84
+          ]
+        },
+        {
+          "mac_address": "C3:00:00:1D:31:27",
+          "device_name": "Eddystone\u2122",
+          "rssi_mean": -85,
+          "rssi_median": -85.0,
+          "rssi_variance": 2,
+          "sample_count": 2,
+          "tx_power": null,
+          "adv_data": {
+            "Srv:0000feaa-0000-1000-8000-00805f9b34fb": "00e8af774f3518299426a456000000062d9d"
+          },
+          "rssi_readings": [
+            -86,
+            -84
+          ]
+        },
+        {
+          "mac_address": "C4:4B:DE:E4:96:BB",
+          "device_name": "Unknown",
+          "rssi_mean": -86,
+          "rssi_median": -86.0,
+          "rssi_variance": 0.0,
+          "sample_count": 1,
+          "tx_power": null,
+          "adv_data": {
+            "Mfg:0x004c": "12020000"
+          },
+          "rssi_readings": [
+            -86
+          ]
+        },
+        {
+          "mac_address": "C3:00:00:1D:31:28",
+          "device_name": "Eddystone\u2122",
+          "rssi_mean": -88,
+          "rssi_median": -88.0,
+          "rssi_variance": 0,
+          "sample_count": 2,
+          "tx_power": null,
+          "adv_data": {
+            "Srv:0000feaa-0000-1000-8000-00805f9b34fb": "00e8af774f3518299426a456000000062d9e"
+          },
+          "rssi_readings": [
+            -88,
+            -88
+          ]
+        },
+        {
+          "mac_address": "4A:FC:1C:3F:EC:AE",
+          "device_name": "LE_WH-1000XM5",
+          "rssi_mean": -89,
+          "rssi_median": -91.0,
+          "rssi_variance": 44,
+          "sample_count": 4,
+          "tx_power": null,
+          "adv_data": {
+            "Mfg:0x012d": "1300017c150f001301520101006e370000"
+          },
+          "rssi_readings": [
+            -80,
+            -94,
+            -88,
+            -94
+          ]
+        },
+        {
+          "mac_address": "E4:15:F6:61:D3:55",
+          "device_name": "Cidron",
+          "rssi_mean": -89,
+          "rssi_median": -89.0,
+          "rssi_variance": 2,
+          "sample_count": 2,
+          "tx_power": null,
+          "adv_data": {
+            "Mfg:0x0d00": "e415f661d355"
+          },
+          "rssi_readings": [
+            -90,
+            -88
+          ]
+        },
+        {
+          "mac_address": "C3:00:00:1D:31:21",
+          "device_name": "Eddystone\u2122",
+          "rssi_mean": -89.33,
+          "rssi_median": -88.0,
+          "rssi_variance": 65.33,
+          "sample_count": 3,
+          "tx_power": null,
+          "adv_data": {
+            "Srv:0000feaa-0000-1000-8000-00805f9b34fb": "00e8af774f3518299426a456000000062d97"
+          },
+          "rssi_readings": [
+            -88,
+            -98,
+            -82
+          ]
+        },
+        {
+          "mac_address": "A0:6C:65:3E:2D:D2",
+          "device_name": "Cidron",
+          "rssi_mean": -91.6,
+          "rssi_median": -92.0,
+          "rssi_variance": 12.8,
+          "sample_count": 5,
+          "tx_power": 0,
+          "adv_data": {
+            "Mfg:0x0d00": "a06c653e2dd2"
+          },
+          "rssi_readings": [
+            -96,
+            -88,
+            -94,
+            -92,
+            -88
+          ]
+        },
+        {
+          "mac_address": "38:0B:3C:ED:76:10",
+          "device_name": "Cidron",
+          "rssi_mean": -92,
+          "rssi_median": -92.0,
+          "rssi_variance": 0.0,
+          "sample_count": 1,
+          "tx_power": null,
+          "adv_data": {
+            "Mfg:0x0d00": "380b3ced7610"
+          },
+          "rssi_readings": [
+            -92
+          ]
+        },
+        {
+          "mac_address": "2F:32:05:DA:D0:4E",
+          "device_name": "Unknown",
+          "rssi_mean": -92,
+          "rssi_median": -92.0,
+          "rssi_variance": 8,
+          "sample_count": 2,
+          "tx_power": null,
+          "adv_data": {
+            "Srv:0000fef3-0000-1000-8000-00805f9b34fb": "4a172353424b5111324b5ddf1f4f118d20694b527740e33aec2abf023fa0177041bdb6d17027441f2bc74a6460745c647bab2faede04f77c359d6211c5cb5d8415051d1f00841506611f008415047f1f00841507611f00831501099e"
+          },
+          "rssi_readings": [
+            -90,
+            -94
+          ]
+        },
+        {
+          "mac_address": "F8:30:02:33:27:91",
+          "device_name": "Cidron",
+          "rssi_mean": -93,
+          "rssi_median": -92.0,
+          "rssi_variance": 4,
+          "sample_count": 4,
+          "tx_power": 0,
+          "adv_data": {
+            "Mfg:0x0d00": "f83002332791"
+          },
+          "rssi_readings": [
+            -96,
+            -92,
+            -92,
+            -92
+          ]
+        },
+        {
+          "mac_address": "C3:00:00:1D:31:23",
+          "device_name": "Eddystone\u2122",
+          "rssi_mean": -93,
+          "rssi_median": -93.0,
+          "rssi_variance": 50,
+          "sample_count": 2,
+          "tx_power": null,
+          "adv_data": {
+            "Srv:0000feaa-0000-1000-8000-00805f9b34fb": "00e8af774f3518299426a456000000062d99"
+          },
+          "rssi_readings": [
+            -88,
+            -98
+          ]
+        },
+        {
+          "mac_address": "20:70:3C:29:4B:0A",
+          "device_name": "Unknown",
+          "rssi_mean": -94,
+          "rssi_median": -95.0,
+          "rssi_variance": 6.4,
+          "sample_count": 6,
+          "tx_power": null,
+          "adv_data": {
+            "Srv:0000fcf1-0000-1000-8000-00805f9b34fb": "04bd9d3e4b6b81e59b2117e78b1f3d3295b74e"
+          },
+          "rssi_readings": [
+            -96,
+            -96,
+            -90,
+            -92,
+            -96,
+            -94
+          ]
+        },
+        {
+          "mac_address": "D5:D6:75:9C:36:EB",
+          "device_name": "Unknown",
+          "rssi_mean": -94,
+          "rssi_median": -94.0,
+          "rssi_variance": 0.0,
+          "sample_count": 1,
+          "tx_power": null,
+          "adv_data": {
+            "Mfg:0x004c": "12020003"
+          },
+          "rssi_readings": [
+            -94
+          ]
+        },
+        {
+          "mac_address": "70:39:5E:0B:BD:A2",
+          "device_name": "Unknown",
+          "rssi_mean": -94.33,
+          "rssi_median": -94.0,
+          "rssi_variance": 2.27,
+          "sample_count": 6,
+          "tx_power": 9,
+          "adv_data": {
+            "Mfg:0x004c": "10050c18a5c8fc"
+          },
+          "rssi_readings": [
+            -94,
+            -94,
+            -96,
+            -94,
+            -96,
+            -92
+          ]
+        },
+        {
+          "mac_address": "C3:00:00:1D:31:26",
+          "device_name": "Eddystone\u2122",
+          "rssi_mean": -95,
+          "rssi_median": -95.0,
+          "rssi_variance": 2,
+          "sample_count": 2,
+          "tx_power": null,
+          "adv_data": {
+            "Srv:0000feaa-0000-1000-8000-00805f9b34fb": "00e8af774f3518299426a456000000062d9c"
+          },
+          "rssi_readings": [
+            -94,
+            -96
+          ]
+        },
+        {
+          "mac_address": "DA:6A:A3:1F:98:5A",
+          "device_name": "Unknown",
+          "rssi_mean": -96,
+          "rssi_median": -96.0,
+          "rssi_variance": 0.0,
+          "sample_count": 1,
+          "tx_power": null,
+          "adv_data": {
+            "Mfg:0x004c": "12020000"
+          },
+          "rssi_readings": [
+            -96
+          ]
+        },
+        {
+          "mac_address": "C3:00:00:1D:31:20",
+          "device_name": "Eddystone\u2122",
+          "rssi_mean": -96,
+          "rssi_median": -96.0,
+          "rssi_variance": 8,
+          "sample_count": 2,
+          "tx_power": null,
+          "adv_data": {
+            "Srv:0000feaa-0000-1000-8000-00805f9b34fb": "00e8af774f3518299426a456000000062d96"
+          },
+          "rssi_readings": [
+            -94,
+            -98
+          ]
+        },
+        {
+          "mac_address": "4B:4E:2C:37:9A:9C",
+          "device_name": "Unknown",
+          "rssi_mean": -96,
+          "rssi_median": -96.0,
+          "rssi_variance": 0,
+          "sample_count": 3,
+          "tx_power": 12,
+          "adv_data": {
+            "Mfg:0x004c": "1007341f2d1bd18778"
+          },
+          "rssi_readings": [
+            -96,
+            -96,
+            -96
+          ]
+        },
+        {
+          "mac_address": "D9:D7:2E:4E:7F:F5",
+          "device_name": "Unknown",
+          "rssi_mean": -96,
+          "rssi_median": -96.0,
+          "rssi_variance": 0.0,
+          "sample_count": 1,
+          "tx_power": null,
+          "adv_data": {
+            "Mfg:0x004c": "12020003"
+          },
+          "rssi_readings": [
+            -96
+          ]
+        },
+        {
+          "mac_address": "60:62:67:7F:55:C5",
+          "device_name": "Unknown",
+          "rssi_mean": -96.67,
+          "rssi_median": -96.0,
+          "rssi_variance": 9.33,
+          "sample_count": 3,
+          "tx_power": 12,
+          "adv_data": {
+            "Mfg:0x004c": "1005331c80dd50"
+          },
+          "rssi_readings": [
+            -96,
+            -100,
+            -94
+          ]
+        },
+        {
+          "mac_address": "E4:15:F6:61:D3:A0",
+          "device_name": "Cidron",
+          "rssi_mean": -96.67,
+          "rssi_median": -98.0,
+          "rssi_variance": 5.33,
+          "sample_count": 3,
+          "tx_power": 0,
+          "adv_data": {
+            "Mfg:0x0d00": "e415f661d3a0"
+          },
+          "rssi_readings": [
+            -94,
+            -98,
+            -98
+          ]
+        },
+        {
+          "mac_address": "1A:FD:E4:CA:AD:A2",
+          "device_name": "Unknown",
+          "rssi_mean": -97,
+          "rssi_median": -97.0,
+          "rssi_variance": 18,
+          "sample_count": 2,
+          "tx_power": null,
+          "adv_data": {
+            "Srv:0000fef3-0000-1000-8000-00805f9b34fb": "4a172353424b5111324b5ddf1f4f118d20694b527740e33aec2abf"
+          },
+          "rssi_readings": [
+            -100,
+            -94
+          ]
+        },
+        {
+          "mac_address": "C4:26:FC:8E:C4:24",
+          "device_name": "Unknown",
+          "rssi_mean": -98,
+          "rssi_median": -98.0,
+          "rssi_variance": 0.0,
+          "sample_count": 1,
+          "tx_power": null,
+          "adv_data": {
+            "Mfg:0x004c": "12025401"
+          },
+          "rssi_readings": [
+            -98
+          ]
+        },
+        {
+          "mac_address": "59:5D:0A:6E:6C:2E",
+          "device_name": "Unknown",
+          "rssi_mean": -98,
+          "rssi_median": -100.0,
+          "rssi_variance": 12,
+          "sample_count": 3,
+          "tx_power": 7,
+          "adv_data": {
+            "Mfg:0x004c": "100528182a39e4"
+          },
+          "rssi_readings": [
+            -100,
+            -100,
+            -94
+          ]
+        },
+        {
+          "mac_address": "94:A9:A8:31:80:D7",
+          "device_name": "Cidron",
+          "rssi_mean": -99.33,
+          "rssi_median": -100.0,
+          "rssi_variance": 1.33,
+          "sample_count": 3,
+          "tx_power": 0,
+          "adv_data": {
+            "Mfg:0x0d00": "94a9a83180d7"
+          },
+          "rssi_readings": [
+            -98,
+            -100,
+            -100
+          ]
+        },
+        {
+          "mac_address": "C3:00:00:1D:31:4D",
+          "device_name": "Eddystone\u2122",
+          "rssi_mean": -100,
+          "rssi_median": -100.0,
+          "rssi_variance": 8,
+          "sample_count": 2,
+          "tx_power": null,
+          "adv_data": {
+            "Srv:0000feaa-0000-1000-8000-00805f9b34fb": "00e8af774f3518299426a456000000062dc3"
+          },
+          "rssi_readings": [
+            -98,
+            -102
+          ]
+        },
+        {
+          "mac_address": "E4:06:FE:BD:34:A4",
+          "device_name": "Buds Live",
+          "rssi_mean": -100,
+          "rssi_median": -100.0,
+          "rssi_variance": 0,
+          "sample_count": 5,
+          "tx_power": null,
+          "adv_data": {
+            "Mfg:0x0075": "00f62e63810580653834000101,42098102141504210149f517011805bcd52000000000e300"
+          },
+          "rssi_readings": [
+            -100,
+            -100,
+            -100,
+            -100,
+            -100
+          ]
+        },
+        {
+          "mac_address": "45:6C:90:68:A5:69",
+          "device_name": "Unknown",
+          "rssi_mean": -100,
+          "rssi_median": -100.0,
+          "rssi_variance": 0,
+          "sample_count": 2,
+          "tx_power": 12,
+          "adv_data": {
+            "Mfg:0x004c": "10053b1878b3cc"
+          },
+          "rssi_readings": [
+            -100,
+            -100
+          ]
+        },
+        {
+          "mac_address": "42:3B:2C:52:5F:03",
+          "device_name": "Unknown",
+          "rssi_mean": -100,
+          "rssi_median": -100.0,
+          "rssi_variance": 8,
+          "sample_count": 2,
+          "tx_power": 12,
+          "adv_data": {
+            "Mfg:0x004c": "0100000000000000000000000080000000,1006311e2297fdd5"
+          },
+          "rssi_readings": [
+            -98,
+            -102
+          ]
+        },
+        {
+          "mac_address": "5B:0F:7A:BA:A0:0B",
+          "device_name": "Unknown",
+          "rssi_mean": -101,
+          "rssi_median": -101.0,
+          "rssi_variance": 17.33,
+          "sample_count": 4,
+          "tx_power": 12,
+          "adv_data": {
+            "Mfg:0x004c": "0100000000000000000000000080000000,1007311fb6db7e2638"
+          },
+          "rssi_readings": [
+            -96,
+            -102,
+            -100,
+            -106
+          ]
+        },
+        {
+          "mac_address": "C3:00:00:1D:31:29",
+          "device_name": "Eddystone\u2122",
+          "rssi_mean": -101,
+          "rssi_median": -101.0,
+          "rssi_variance": 2,
+          "sample_count": 2,
+          "tx_power": null,
+          "adv_data": {
+            "Srv:0000feaa-0000-1000-8000-00805f9b34fb": "00e8af774f3518299426a456000000062d9f"
+          },
+          "rssi_readings": [
+            -100,
+            -102
+          ]
+        },
+        {
+          "mac_address": "51:33:9C:A5:94:DB",
+          "device_name": "Unknown",
+          "rssi_mean": -103,
+          "rssi_median": -103.0,
+          "rssi_variance": 2,
+          "sample_count": 2,
+          "tx_power": -13,
+          "adv_data": {
+            "Mfg:0x012d": "04000202b0320901cabfe1de9400020033230000,130001dca30f0016010102fdfddd6dc774",
+            "Mfg:0xca0d": "5702e981a72f",
+            "Srv:0000fe2c-0000-1000-8000-00805f9b34fb": "1030000000211c9834372c7f"
+          },
+          "rssi_readings": [
+            -102,
+            -104
+          ]
+        },
+        {
+          "mac_address": "C3:00:00:1D:31:4B",
+          "device_name": "Eddystone\u2122",
+          "rssi_mean": -103,
+          "rssi_median": -103.0,
+          "rssi_variance": 18,
+          "sample_count": 2,
+          "tx_power": null,
+          "adv_data": {
+            "Srv:0000feaa-0000-1000-8000-00805f9b34fb": "00e8af774f3518299426a456000000062dc1"
+          },
+          "rssi_readings": [
+            -100,
+            -106
+          ]
+        },
+        {
+          "mac_address": "A0:6C:65:3E:2D:ED",
+          "device_name": "Unknown",
+          "rssi_mean": -104,
+          "rssi_median": -104.0,
+          "rssi_variance": 0.0,
+          "sample_count": 1,
+          "tx_power": null,
+          "adv_data": {
+            "Mfg:0x0d00": "a06c653e2ded"
+          },
+          "rssi_readings": [
+            -104
+          ]
+        },
+        {
+          "mac_address": "6F:F3:82:C3:52:5D",
+          "device_name": "Unknown",
+          "rssi_mean": -104,
+          "rssi_median": -104.0,
+          "rssi_variance": 0.0,
+          "sample_count": 1,
+          "tx_power": 8,
+          "adv_data": {
+            "Mfg:0x004c": "1006311eb575dcd1"
+          },
+          "rssi_readings": [
+            -104
+          ]
+        },
+        {
+          "mac_address": "C3:00:00:1D:31:1F",
+          "device_name": "Eddystone\u2122",
+          "rssi_mean": -104,
+          "rssi_median": -104.0,
+          "rssi_variance": 0.0,
+          "sample_count": 1,
+          "tx_power": null,
+          "adv_data": {
+            "Srv:0000feaa-0000-1000-8000-00805f9b34fb": "00e8af774f3518299426a456000000062d95"
+          },
+          "rssi_readings": [
+            -104
+          ]
+        },
+        {
+          "mac_address": "30:AE:A4:60:58:FA",
+          "device_name": "Unknown",
+          "rssi_mean": -105,
+          "rssi_median": -105.0,
+          "rssi_variance": 2,
+          "sample_count": 2,
+          "tx_power": null,
+          "adv_data": {
+            "Mfg:0xffff": "30aea46058fa"
+          },
+          "rssi_readings": [
+            -106,
+            -104
           ]
         }
       ]
