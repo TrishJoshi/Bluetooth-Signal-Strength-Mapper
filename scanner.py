@@ -54,9 +54,17 @@ async def scan_ble_devices(
             return
         rssi_accumulator[mac].append(advertisement.rssi)
         
+        # Check for Eddystone service UUID (0xFEAA)
+        is_eddystone = (
+            "0000feaa-0000-1000-8000-00805f9b34fb" in advertisement.service_data or
+            "0000feaa-0000-1000-8000-00805f9b34fb" in advertisement.service_uuids
+        )
+        
         # Prefer the device name from the current packet, or fall back to previously seen / "Unknown"
         if device.name:
             device_names[mac] = device.name
+        elif is_eddystone and device_names.get(mac, "Unknown") == "Unknown":
+            device_names[mac] = "Eddystone™"
         elif mac not in device_names:
             device_names[mac] = "Unknown"
             
@@ -69,7 +77,8 @@ async def scan_ble_devices(
         for uuid, data in advertisement.service_data.items():
             adv_accumulator[mac][f"Srv:{uuid}"].add(data.hex())
 
-    scanner = BleakScanner(detection_callback=on_advertisement)
+    # Use active scanning to proactively request local names from devices
+    scanner = BleakScanner(detection_callback=on_advertisement, scanning_mode="active")
 
     await scanner.start()
     await asyncio.sleep(duration_seconds)
@@ -82,6 +91,7 @@ def _build_results(
     rssi_accumulator: dict[str, list[int]],
     device_names: dict[str, str],
     tx_powers: dict[str, Optional[int]],
+    adv_accumulator: dict[str, dict[str, set[str]]],
 ) -> list[ScanResult]:
     """Convert raw RSSI accumulator data into sorted ScanResult objects."""
     results = []
@@ -89,6 +99,11 @@ def _build_results(
         mean_rssi = statistics.mean(readings)
         median_rssi = statistics.median(readings)
         variance_rssi = statistics.variance(readings) if len(readings) > 1 else 0.0
+
+        # Flatten sets of hex strings into comma-separated strings for CSV/display
+        formatted_adv_data = {
+            k: ",".join(sorted(v)) for k, v in adv_accumulator[mac].items()
+        }
 
         results.append(
             ScanResult(
@@ -99,6 +114,7 @@ def _build_results(
                 rssi_variance=round(variance_rssi, 2),
                 sample_count=len(readings),
                 tx_power=tx_powers.get(mac),
+                adv_data=formatted_adv_data,
                 rssi_readings=readings,
             )
         )

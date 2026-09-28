@@ -440,7 +440,7 @@ def _show_campaign_screen() -> None:
             key="cont_direction",
             label_visibility="collapsed",
         )
-        cont_interval = st.slider("Interval (s)", 2, 120, 10, key="cont_interval", label_visibility="collapsed")
+        cont_interval = _advanced_slider("Interval (s)", "cont_interval", 1, 300, 10, is_int=True)
 
         if not st.session_state.continuous_running:
             if st.button(":material/play_arrow: Start auto-scan", key="cont_start"):
@@ -476,48 +476,49 @@ def _show_campaign_screen() -> None:
 # ---------------------------------------------------------------------------
 
 def _render_sidebar(campaign: Campaign) -> None:
-    st.sidebar.title(":material/settings: Settings")
+    with st.sidebar:
+        st.title(":material/settings: Settings")
 
-    st.sidebar.header("Image processing")
-    strip_hex = st.sidebar.color_picker("Strip colour", value="#FFFFFF")
-    strip_tol = st.sidebar.slider("Tolerance", 0, 150, 30, key="strip_tol")
-    c1, c2 = st.sidebar.columns(2)
-    if c1.button("Apply strip", key="apply_strip"):
-        r, g, b = int(strip_hex[1:3], 16), int(strip_hex[3:5], 16), int(strip_hex[5:7], 16)
-        st.session_state.stripped_floor_plan = strip_color_range(
-            st.session_state.raw_floor_plan, (r, g, b), strip_tol
+        st.header("Image processing")
+        strip_hex = st.color_picker("Strip colour", value="#FFFFFF")
+        strip_tol = _advanced_slider("Tolerance", "strip_tol", 0, 255, 30, is_int=True)
+        c1, c2 = st.columns(2)
+        if c1.button("Apply strip", key="apply_strip"):
+            r, g, b = int(strip_hex[1:3], 16), int(strip_hex[3:5], 16), int(strip_hex[5:7], 16)
+            st.session_state.stripped_floor_plan = strip_color_range(
+                st.session_state.raw_floor_plan, (r, g, b), strip_tol
+            )
+            st.session_state["_bg_cache_key"] = None
+        if c2.button("Reset", key="reset_strip"):
+            st.session_state.stripped_floor_plan = st.session_state.raw_floor_plan.copy()
+            st.session_state["_bg_cache_key"] = None
+
+        st.header("Grid settings")
+        _advanced_slider(
+            "Pixels per meter", "pixels_per_meter", 1, 1000, 60, is_int=True,
+            help_text="Increase until one grid square matches 1 real metre on the floor plan."
         )
-        st.session_state["_bg_cache_key"] = None
-    if c2.button("Reset", key="reset_strip"):
-        st.session_state.stripped_floor_plan = st.session_state.raw_floor_plan.copy()
-        st.session_state["_bg_cache_key"] = None
+        _advanced_slider(
+            "Cell size (m)", "cell_size_meters", 0.05, 10.0, 1.0, step=0.05
+        )
+        _advanced_slider(
+            "Display zoom", "display_zoom", 0.1, 10.0, 1.0, step=0.1,
+            help_text="Zoom in for finer grid interaction. Does not change measurement scale."
+        )
 
-    st.sidebar.header("Grid settings")
-    st.sidebar.slider(
-        "Pixels per meter", min_value=1, max_value=300, key="pixels_per_meter",
-        help="Increase until one grid square matches 1 real metre on the floor plan.",
-    )
-    st.sidebar.select_slider(
-        "Cell size (m)", options=[0.25, 0.5, 1.0, 2.0], key="cell_size_meters",
-    )
-    st.sidebar.slider(
-        "Display zoom", min_value=0.25, max_value=4.0, value=1.0, step=0.25, key="display_zoom",
-        help="Zoom in for finer grid interaction. Does not change measurement scale.",
-    )
+        st.header("Scan settings")
+        _advanced_slider("Scan duration (s)", "scan_duration_s", 1, 120, 3, is_int=True)
+        st.text_area(
+            "MAC filter (one prefix per line)",
+            placeholder="E2:C5:6D\nD0:23:56",
+            height=70,
+            key="mac_filter_text",
+        )
 
-    st.sidebar.header("Scan settings")
-    st.sidebar.slider("Scan duration (s)", 1, 10, key="scan_duration_s")
-    st.sidebar.text_area(
-        "MAC filter (one prefix per line)",
-        placeholder="E2:C5:6D\nD0:23:56",
-        height=70,
-        key="mac_filter_text",
-    )
-
-    st.sidebar.divider()
-    st.sidebar.caption(f":material/folder: `{campaign.directory.name}`")
-    n = len(st.session_state.measurements)
-    st.sidebar.caption(f":material/table_rows: {n} measurements this session")
+        st.divider()
+        st.caption(f":material/folder: `{campaign.directory.name}`")
+        n = len(st.session_state.measurements)
+        st.caption(f":material/table_rows: {n} measurements this session")
 
 
 # ---------------------------------------------------------------------------
@@ -542,6 +543,7 @@ def _render_results_table(
     rows = []
     for m in measurements:
         for r in m.scan_results:
+            adv_str = " | ".join(f"{k}={v}" for k, v in r.adv_data.items())
             rows.append({
                 "Time": m.timestamp.strftime("%H:%M:%S"),
                 "True (r,c)": str(m.true_grid),
@@ -552,6 +554,7 @@ def _render_results_table(
                 "RSSI median": r.rssi_median,
                 "RSSI var": r.rssi_variance,
                 "Samples": r.sample_count,
+                "Raw Data": adv_str,
             })
 
     st.dataframe(pd.DataFrame(rows), hide_index=True)
@@ -612,6 +615,72 @@ def _render_phone_sensor_controls() -> None:
 # ---------------------------------------------------------------------------
 # Action helpers — keep the campaign screen body readable.
 # ---------------------------------------------------------------------------
+
+def _advanced_slider(
+    label: str,
+    key: str,
+    default_min: float,
+    default_max: float,
+    default_val: float,
+    step: float = 1.0,
+    is_int: bool = False,
+    help_text: str = "",
+) -> float:
+    """A synced slider + text input with a popover to change min/max bounds."""
+    t = int if is_int else float
+
+    min_key = f"{key}_min"
+    max_key = f"{key}_max"
+    st.session_state.setdefault(min_key, t(default_min))
+    st.session_state.setdefault(max_key, t(default_max))
+    
+    st.session_state.setdefault(key, t(default_val))
+    st.session_state.setdefault(f"{key}_num", st.session_state[key])
+
+    c_min = st.session_state[min_key]
+    c_max = st.session_state[max_key]
+
+    with st.popover(f"⚙️ {label} Range", help="Configure slider minimum and maximum"):
+        col1, col2 = st.columns(2)
+        new_min = col1.number_input("Min", value=c_min, key=f"ui_{min_key}")
+        new_max = col2.number_input("Max", value=c_max, key=f"ui_{max_key}")
+        c_min, c_max = t(new_min), t(new_max)
+        if c_min > c_max:
+            c_max = c_min
+        st.session_state[min_key] = c_min
+        st.session_state[max_key] = c_max
+
+    if st.session_state[key] < c_min: st.session_state[key] = c_min
+    if st.session_state[key] > c_max: st.session_state[key] = c_max
+
+    def on_slider():
+        st.session_state[f"{key}_num"] = st.session_state[key]
+
+    def on_num():
+        val = st.session_state[f"{key}_num"]
+        if val < c_min: val = c_min
+        if val > c_max: val = c_max
+        st.session_state[key] = val
+
+    if help_text:
+        st.markdown(label, help=help_text)
+    else:
+        st.markdown(label)
+
+    c_slider, c_num = st.columns([3, 1])
+    with c_slider:
+        st.slider(
+            label, min_value=c_min, max_value=c_max, step=t(step), key=key,
+            on_change=on_slider, label_visibility="collapsed"
+        )
+    with c_num:
+        st.number_input(
+            label, min_value=c_min, max_value=c_max, step=t(step), key=f"{key}_num",
+            on_change=on_num, label_visibility="collapsed"
+        )
+        
+    return st.session_state[key]
+
 
 def _move_selected(direction: str, max_rows: int, max_cols: int) -> None:
     new_cell = st.session_state.selected_cell.moved(direction)

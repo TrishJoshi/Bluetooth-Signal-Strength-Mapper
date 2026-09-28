@@ -4,7 +4,7 @@
     "pixels_per_meter": 60.0,
     "cell_size_meters": 1.0
   },
-  "exported_at": "2026-09-23T12:10:04.303755",
+  "exported_at": "2026-09-28T13:00:20.471293",
   "measurements": [
     {
       "timestamp": "2026-09-23T12:10:04.298204",
@@ -22,116 +22,101 @@
         {
           "mac_address": "E9:78:EA:F0:85:20",
           "device_name": "Unknown",
-          "rssi_mean": -38,
+          "rssi_mean": -38.0,
           "rssi_median": -38.0,
           "rssi_variance": 0.0,
           "sample_count": 1,
           "tx_power": null,
-          "rssi_readings": [
-            -38
-          ]
+          "adv_data": {},
+          "rssi_readings": []
         },
         {
           "mac_address": "46:98:EE:E1:92:6C",
           "device_name": "Unknown",
-          "rssi_mean": -42,
+          "rssi_mean": -42.0,
           "rssi_median": -42.0,
-          "rssi_variance": 0,
+          "rssi_variance": 0.0,
           "sample_count": 2,
           "tx_power": 0,
-          "rssi_readings": [
-            -42,
-            -42
-          ]
+          "adv_data": {},
+          "rssi_readings": []
         },
         {
           "mac_address": "A8:E6:E8:ED:A3:AA",
           "device_name": "WH-CH720N",
-          "rssi_mean": -44,
+          "rssi_mean": -44.0,
           "rssi_median": -44.0,
           "rssi_variance": 0.0,
           "sample_count": 1,
           "tx_power": null,
-          "rssi_readings": [
-            -44
-          ]
+          "adv_data": {},
+          "rssi_readings": []
         },
         {
           "mac_address": "C9:7C:E5:7F:34:56",
           "device_name": "Unknown",
-          "rssi_mean": -52,
+          "rssi_mean": -52.0,
           "rssi_median": -52.0,
           "rssi_variance": 0.0,
           "sample_count": 1,
           "tx_power": -12,
-          "rssi_readings": [
-            -52
-          ]
+          "adv_data": {},
+          "rssi_readings": []
         },
         {
           "mac_address": "FC:4D:8C:8B:06:54",
           "device_name": "Unknown",
-          "rssi_mean": -54,
+          "rssi_mean": -54.0,
           "rssi_median": -54.0,
           "rssi_variance": 0.0,
           "sample_count": 1,
           "tx_power": null,
-          "rssi_readings": [
-            -54
-          ]
+          "adv_data": {},
+          "rssi_readings": []
         },
         {
           "mac_address": "43:10:36:A1:80:17",
           "device_name": "Unknown",
-          "rssi_mean": -57,
+          "rssi_mean": -57.0,
           "rssi_median": -57.0,
-          "rssi_variance": 18,
+          "rssi_variance": 18.0,
           "sample_count": 2,
           "tx_power": 12,
-          "rssi_readings": [
-            -60,
-            -54
-          ]
+          "adv_data": {},
+          "rssi_readings": []
         },
         {
           "mac_address": "43:6A:DA:F1:4E:7E",
           "device_name": "Unknown",
-          "rssi_mean": -61,
+          "rssi_mean": -61.0,
           "rssi_median": -60.0,
           "rssi_variance": 46.67,
           "sample_count": 4,
           "tx_power": 12,
-          "rssi_readings": [
-            -70,
-            -62,
-            -54,
-            -58
-          ]
+          "adv_data": {},
+          "rssi_readings": []
         },
         {
           "mac_address": "FE:59:7C:85:E6:7C",
           "device_name": "Unknown",
-          "rssi_mean": -64,
+          "rssi_mean": -64.0,
           "rssi_median": -64.0,
           "rssi_variance": 0.0,
           "sample_count": 1,
           "tx_power": null,
-          "rssi_readings": [
-            -64
-          ]
+          "adv_data": {},
+          "rssi_readings": []
         },
         {
           "mac_address": "57:B0:EF:2F:37:73",
           "device_name": "CMF Buds 2a",
-          "rssi_mean": -65,
+          "rssi_mean": -65.0,
           "rssi_median": -65.0,
-          "rssi_variance": 50,
+          "rssi_variance": 50.0,
           "sample_count": 2,
           "tx_power": -9,
-          "rssi_readings": [
-            -60,
-            -70
-          ]
+          "adv_data": {},
+          "rssi_readings": []
         },
         {
           "mac_address": "11:0F:56:AA:20:D2",
@@ -141,11 +126,8 @@
           "rssi_variance": 5.33,
           "sample_count": 3,
           "tx_power": null,
-          "rssi_readings": [
-            -64,
-            -68,
-            -64
-          ]
+          "adv_data": {},
+          "rssi_readings": []
         },
         {
           "mac_address": "61:DB:B7:93:A3:DD",
@@ -155,42 +137,30 @@
           "rssi_variance": 8.95,
           "sample_count": 7,
           "tx_power": -2,
-          "rssi_readings": [
-            -68,
-            -70,
-            -70,
-            -66,
-            -62,
-            -66,
-            -64
-          ]
+          "adv_data": {},
+          "rssi_readings": []
         },
         {
           "mac_address": "AC:23:3F:50:45:FB",
           "device_name": "Unknown",
-          "rssi_mean": -68,
+          "rssi_mean": -68.0,
           "rssi_median": -68.0,
           "rssi_variance": 13.33,
           "sample_count": 4,
           "tx_power": null,
-          "rssi_readings": [
-            -66,
-            -70,
-            -72,
-            -64
-          ]
+          "adv_data": {},
+          "rssi_readings": []
         },
         {
           "mac_address": "7B:ED:86:62:8B:40",
           "device_name": "Unknown",
-          "rssi_mean": -74,
+          "rssi_mean": -74.0,
           "rssi_median": -74.0,
           "rssi_variance": 0.0,
           "sample_count": 1,
           "tx_power": null,
-          "rssi_readings": [
-            -74
-          ]
+          "adv_data": {},
+          "rssi_readings": []
         },
         {
           "mac_address": "6B:BE:4F:DF:95:94",
@@ -200,51 +170,41 @@
           "rssi_variance": 9.33,
           "sample_count": 3,
           "tx_power": -9,
-          "rssi_readings": [
-            -80,
-            -76,
-            -74
-          ]
+          "adv_data": {},
+          "rssi_readings": []
         },
         {
           "mac_address": "4C:85:BB:AD:10:36",
           "device_name": "Unknown",
-          "rssi_mean": -77,
+          "rssi_mean": -77.0,
           "rssi_median": -77.0,
-          "rssi_variance": 50,
+          "rssi_variance": 50.0,
           "sample_count": 2,
           "tx_power": 17,
-          "rssi_readings": [
-            -82,
-            -72
-          ]
+          "adv_data": {},
+          "rssi_readings": []
         },
         {
           "mac_address": "30:80:E7:92:0B:E5",
           "device_name": "Unknown",
-          "rssi_mean": -79,
+          "rssi_mean": -79.0,
           "rssi_median": -79.0,
           "rssi_variance": 22.67,
           "sample_count": 4,
           "tx_power": null,
-          "rssi_readings": [
-            -84,
-            -82,
-            -76,
-            -74
-          ]
+          "adv_data": {},
+          "rssi_readings": []
         },
         {
           "mac_address": "DF:29:5E:0F:31:1A",
           "device_name": "Unknown",
-          "rssi_mean": -80,
+          "rssi_mean": -80.0,
           "rssi_median": -80.0,
           "rssi_variance": 0.0,
           "sample_count": 1,
           "tx_power": null,
-          "rssi_readings": [
-            -80
-          ]
+          "adv_data": {},
+          "rssi_readings": []
         },
         {
           "mac_address": "20:16:42:3B:3A:53",
@@ -254,69 +214,52 @@
           "rssi_variance": 4.65,
           "sample_count": 11,
           "tx_power": null,
-          "rssi_readings": [
-            -84,
-            -86,
-            -80,
-            -86,
-            -84,
-            -86,
-            -82,
-            -82,
-            -86,
-            -82,
-            -82
-          ]
+          "adv_data": {},
+          "rssi_readings": []
         },
         {
           "mac_address": "64:7B:CF:E5:DF:EC",
           "device_name": "Unknown",
-          "rssi_mean": -84,
+          "rssi_mean": -84.0,
           "rssi_median": -84.0,
-          "rssi_variance": 4,
+          "rssi_variance": 4.0,
           "sample_count": 3,
           "tx_power": 12,
-          "rssi_readings": [
-            -84,
-            -82,
-            -86
-          ]
+          "adv_data": {},
+          "rssi_readings": []
         },
         {
           "mac_address": "56:EE:FA:F3:2F:0E",
           "device_name": "Unknown",
-          "rssi_mean": -84,
+          "rssi_mean": -84.0,
           "rssi_median": -84.0,
           "rssi_variance": 0.0,
           "sample_count": 1,
           "tx_power": 3,
-          "rssi_readings": [
-            -84
-          ]
+          "adv_data": {},
+          "rssi_readings": []
         },
         {
           "mac_address": "78:68:FE:28:59:89",
           "device_name": "realme Buds Air7 Pro",
-          "rssi_mean": -84,
+          "rssi_mean": -84.0,
           "rssi_median": -84.0,
           "rssi_variance": 0.0,
           "sample_count": 1,
           "tx_power": -11,
-          "rssi_readings": [
-            -84
-          ]
+          "adv_data": {},
+          "rssi_readings": []
         },
         {
           "mac_address": "DE:69:1F:1B:17:52",
           "device_name": "Unknown",
-          "rssi_mean": -84,
+          "rssi_mean": -84.0,
           "rssi_median": -84.0,
           "rssi_variance": 0.0,
           "sample_count": 1,
           "tx_power": null,
-          "rssi_readings": [
-            -84
-          ]
+          "adv_data": {},
+          "rssi_readings": []
         },
         {
           "mac_address": "20:16:42:3B:82:E5",
@@ -326,19 +269,8 @@
           "rssi_variance": 9.16,
           "sample_count": 11,
           "tx_power": null,
-          "rssi_readings": [
-            -80,
-            -82,
-            -82,
-            -88,
-            -80,
-            -88,
-            -88,
-            -84,
-            -86,
-            -84,
-            -84
-          ]
+          "adv_data": {},
+          "rssi_readings": []
         },
         {
           "mac_address": "0D:37:5F:B2:04:C2",
@@ -348,155 +280,129 @@
           "rssi_variance": 49.33,
           "sample_count": 3,
           "tx_power": null,
-          "rssi_readings": [
-            -84,
-            -92,
-            -78
-          ]
+          "adv_data": {},
+          "rssi_readings": []
         },
         {
           "mac_address": "72:06:4C:F8:E1:E3",
           "device_name": "Unknown",
-          "rssi_mean": -86,
+          "rssi_mean": -86.0,
           "rssi_median": -86.0,
-          "rssi_variance": 4,
+          "rssi_variance": 4.0,
           "sample_count": 3,
           "tx_power": null,
-          "rssi_readings": [
-            -86,
-            -84,
-            -88
-          ]
+          "adv_data": {},
+          "rssi_readings": []
         },
         {
           "mac_address": "72:B0:2B:AF:B4:98",
           "device_name": "Unknown",
-          "rssi_mean": -86,
+          "rssi_mean": -86.0,
           "rssi_median": -86.0,
-          "rssi_variance": 8,
+          "rssi_variance": 8.0,
           "sample_count": 2,
           "tx_power": 12,
-          "rssi_readings": [
-            -84,
-            -88
-          ]
+          "adv_data": {},
+          "rssi_readings": []
         },
         {
           "mac_address": "F1:C7:20:3D:4B:57",
           "device_name": "Unknown",
-          "rssi_mean": -86,
+          "rssi_mean": -86.0,
           "rssi_median": -86.0,
           "rssi_variance": 0.0,
           "sample_count": 1,
           "tx_power": null,
-          "rssi_readings": [
-            -86
-          ]
+          "adv_data": {},
+          "rssi_readings": []
         },
         {
           "mac_address": "61:55:11:15:F9:20",
           "device_name": "Unknown",
-          "rssi_mean": -86,
+          "rssi_mean": -86.0,
           "rssi_median": -86.0,
           "rssi_variance": 0.0,
           "sample_count": 1,
           "tx_power": 0,
-          "rssi_readings": [
-            -86
-          ]
+          "adv_data": {},
+          "rssi_readings": []
         },
         {
           "mac_address": "33:62:34:4E:E3:74",
           "device_name": "Unknown",
-          "rssi_mean": -86,
+          "rssi_mean": -86.0,
           "rssi_median": -86.0,
-          "rssi_variance": 8,
+          "rssi_variance": 8.0,
           "sample_count": 2,
           "tx_power": null,
-          "rssi_readings": [
-            -84,
-            -88
-          ]
+          "adv_data": {},
+          "rssi_readings": []
         },
         {
           "mac_address": "27:3B:A3:61:C1:7A",
           "device_name": "Unknown",
-          "rssi_mean": -87,
+          "rssi_mean": -87.0,
           "rssi_median": -86.0,
-          "rssi_variance": 4,
+          "rssi_variance": 4.0,
           "sample_count": 4,
           "tx_power": null,
-          "rssi_readings": [
-            -90,
-            -86,
-            -86,
-            -86
-          ]
+          "adv_data": {},
+          "rssi_readings": []
         },
         {
           "mac_address": "46:9A:EC:F2:93:F7",
           "device_name": "Unknown",
-          "rssi_mean": -88,
+          "rssi_mean": -88.0,
           "rssi_median": -88.0,
           "rssi_variance": 0.0,
           "sample_count": 1,
           "tx_power": null,
-          "rssi_readings": [
-            -88
-          ]
+          "adv_data": {},
+          "rssi_readings": []
         },
         {
           "mac_address": "79:EE:1D:ED:BF:A5",
           "device_name": "Unknown",
-          "rssi_mean": -88,
+          "rssi_mean": -88.0,
           "rssi_median": -88.0,
           "rssi_variance": 0.0,
           "sample_count": 1,
           "tx_power": null,
-          "rssi_readings": [
-            -88
-          ]
+          "adv_data": {},
+          "rssi_readings": []
         },
         {
           "mac_address": "ED:16:8F:3E:54:EF",
           "device_name": "Unknown",
-          "rssi_mean": -89,
+          "rssi_mean": -89.0,
           "rssi_median": -89.0,
-          "rssi_variance": 2,
+          "rssi_variance": 2.0,
           "sample_count": 2,
           "tx_power": null,
-          "rssi_readings": [
-            -88,
-            -90
-          ]
+          "adv_data": {},
+          "rssi_readings": []
         },
         {
           "mac_address": "5A:DE:1F:67:CD:38",
           "device_name": "DONES",
-          "rssi_mean": -89,
+          "rssi_mean": -89.0,
           "rssi_median": -89.0,
-          "rssi_variance": 2,
+          "rssi_variance": 2.0,
           "sample_count": 2,
           "tx_power": null,
-          "rssi_readings": [
-            -88,
-            -90
-          ]
+          "adv_data": {},
+          "rssi_readings": []
         },
         {
           "mac_address": "4F:A3:3C:AE:2B:96",
           "device_name": "Unknown",
           "rssi_mean": -89.5,
           "rssi_median": -90.0,
-          "rssi_variance": 1,
+          "rssi_variance": 1.0,
           "sample_count": 4,
           "tx_power": null,
-          "rssi_readings": [
-            -90,
-            -90,
-            -90,
-            -88
-          ]
+          "adv_data": {},
+          "rssi_readings": []
         },
         {
           "mac_address": "6B:D3:41:33:2D:57",
@@ -506,90 +412,74 @@
           "rssi_variance": 14.33,
           "sample_count": 4,
           "tx_power": 12,
-          "rssi_readings": [
-            -92,
-            -84,
-            -92,
-            -90
-          ]
+          "adv_data": {},
+          "rssi_readings": []
         },
         {
           "mac_address": "4A:E4:28:37:F1:1F",
           "device_name": "TYLS\u00c4-FUKSIL\u00c4PP",
-          "rssi_mean": -90,
+          "rssi_mean": -90.0,
           "rssi_median": -90.0,
           "rssi_variance": 34.67,
           "sample_count": 4,
           "tx_power": null,
-          "rssi_readings": [
-            -84,
-            -86,
-            -94,
-            -96
-          ]
+          "adv_data": {},
+          "rssi_readings": []
         },
         {
           "mac_address": "7C:8E:78:1D:8E:2A",
           "device_name": "Unknown",
-          "rssi_mean": -90,
+          "rssi_mean": -90.0,
           "rssi_median": -90.0,
-          "rssi_variance": 8,
+          "rssi_variance": 8.0,
           "sample_count": 2,
           "tx_power": 12,
-          "rssi_readings": [
-            -88,
-            -92
-          ]
+          "adv_data": {},
+          "rssi_readings": []
         },
         {
           "mac_address": "4E:89:70:FB:D4:60",
           "device_name": "Unknown",
-          "rssi_mean": -90,
+          "rssi_mean": -90.0,
           "rssi_median": -90.0,
-          "rssi_variance": 8,
+          "rssi_variance": 8.0,
           "sample_count": 2,
           "tx_power": 12,
-          "rssi_readings": [
-            -92,
-            -88
-          ]
+          "adv_data": {},
+          "rssi_readings": []
         },
         {
           "mac_address": "D7:D9:A9:19:E1:A1",
           "device_name": "Unknown",
-          "rssi_mean": -90,
+          "rssi_mean": -90.0,
           "rssi_median": -90.0,
           "rssi_variance": 0.0,
           "sample_count": 1,
           "tx_power": null,
-          "rssi_readings": [
-            -90
-          ]
+          "adv_data": {},
+          "rssi_readings": []
         },
         {
           "mac_address": "1A:8E:8B:66:71:25",
           "device_name": "Unknown",
-          "rssi_mean": -90,
+          "rssi_mean": -90.0,
           "rssi_median": -90.0,
-          "rssi_variance": 0,
+          "rssi_variance": 0.0,
           "sample_count": 2,
           "tx_power": null,
-          "rssi_readings": [
-            -90,
-            -90
-          ]
+          "adv_data": {},
+          "rssi_readings": []
         },
         {
           "mac_address": "4B:5E:AF:8E:A9:5C",
           "device_name": "Unknown",
-          "rssi_mean": -90,
+          "rssi_mean": -90.0,
           "rssi_median": -90.0,
           "rssi_variance": 0.0,
           "sample_count": 1,
           "tx_power": null,
-          "rssi_readings": [
-            -90
-          ]
+          "adv_data": {},
+          "rssi_readings": []
         },
         {
           "mac_address": "61:DC:C1:5D:E8:16",
@@ -599,11 +489,8 @@
           "rssi_variance": 25.33,
           "sample_count": 3,
           "tx_power": null,
-          "rssi_readings": [
-            -96,
-            -86,
-            -90
-          ]
+          "adv_data": {},
+          "rssi_readings": []
         },
         {
           "mac_address": "50:A6:C8:3A:FF:96",
@@ -613,58 +500,41 @@
           "rssi_variance": 9.33,
           "sample_count": 3,
           "tx_power": null,
-          "rssi_readings": [
-            -94,
-            -90,
-            -88
-          ]
+          "adv_data": {},
+          "rssi_readings": []
         },
         {
           "mac_address": "57:CD:81:F7:CB:34",
           "device_name": "Unknown",
-          "rssi_mean": -91,
+          "rssi_mean": -91.0,
           "rssi_median": -91.0,
           "rssi_variance": 6.67,
           "sample_count": 4,
           "tx_power": null,
-          "rssi_readings": [
-            -88,
-            -92,
-            -90,
-            -94
-          ]
+          "adv_data": {},
+          "rssi_readings": []
         },
         {
           "mac_address": "7B:78:30:9A:A9:31",
           "device_name": "Unknown",
-          "rssi_mean": -91,
+          "rssi_mean": -91.0,
           "rssi_median": -91.0,
-          "rssi_variance": 2,
+          "rssi_variance": 2.0,
           "sample_count": 2,
           "tx_power": null,
-          "rssi_readings": [
-            -92,
-            -90
-          ]
+          "adv_data": {},
+          "rssi_readings": []
         },
         {
           "mac_address": "39:39:86:3B:F4:C7",
           "device_name": "Unknown",
-          "rssi_mean": -91,
+          "rssi_mean": -91.0,
           "rssi_median": -88.0,
           "rssi_variance": 50.29,
           "sample_count": 8,
           "tx_power": null,
-          "rssi_readings": [
-            -86,
-            -84,
-            -88,
-            -88,
-            -100,
-            -98,
-            -100,
-            -84
-          ]
+          "adv_data": {},
+          "rssi_readings": []
         },
         {
           "mac_address": "1F:D5:87:EF:01:37",
@@ -674,14 +544,8 @@
           "rssi_variance": 5.87,
           "sample_count": 6,
           "tx_power": null,
-          "rssi_readings": [
-            -90,
-            -90,
-            -92,
-            -90,
-            -96,
-            -90
-          ]
+          "adv_data": {},
+          "rssi_readings": []
         },
         {
           "mac_address": "2D:B3:07:B8:10:90",
@@ -691,169 +555,140 @@
           "rssi_variance": 9.33,
           "sample_count": 3,
           "tx_power": null,
-          "rssi_readings": [
-            -92,
-            -88,
-            -94
-          ]
+          "adv_data": {},
+          "rssi_readings": []
         },
         {
           "mac_address": "07:5A:1A:B9:ED:54",
           "device_name": "Unknown",
-          "rssi_mean": -92,
+          "rssi_mean": -92.0,
           "rssi_median": -92.0,
-          "rssi_variance": 12,
+          "rssi_variance": 12.0,
           "sample_count": 7,
           "tx_power": null,
-          "rssi_readings": [
-            -96,
-            -94,
-            -90,
-            -88,
-            -96,
-            -88,
-            -92
-          ]
+          "adv_data": {},
+          "rssi_readings": []
         },
         {
           "mac_address": "63:CE:F8:20:69:DD",
           "device_name": "Unknown",
-          "rssi_mean": -92,
+          "rssi_mean": -92.0,
           "rssi_median": -92.0,
-          "rssi_variance": 4,
+          "rssi_variance": 4.0,
           "sample_count": 3,
           "tx_power": null,
-          "rssi_readings": [
-            -94,
-            -90,
-            -92
-          ]
+          "adv_data": {},
+          "rssi_readings": []
         },
         {
           "mac_address": "04:E2:56:D7:93:E2",
           "device_name": "Unknown",
-          "rssi_mean": -92,
+          "rssi_mean": -92.0,
           "rssi_median": -91.0,
-          "rssi_variance": 8,
+          "rssi_variance": 8.0,
           "sample_count": 4,
           "tx_power": null,
-          "rssi_readings": [
-            -90,
-            -96,
-            -90,
-            -92
-          ]
+          "adv_data": {},
+          "rssi_readings": []
         },
         {
           "mac_address": "00:B7:B9:6E:89:1D",
           "device_name": "Unknown",
-          "rssi_mean": -92,
+          "rssi_mean": -92.0,
           "rssi_median": -92.0,
-          "rssi_variance": 4,
+          "rssi_variance": 4.0,
           "sample_count": 3,
           "tx_power": null,
-          "rssi_readings": [
-            -90,
-            -94,
-            -92
-          ]
+          "adv_data": {},
+          "rssi_readings": []
         },
         {
           "mac_address": "DD:18:4D:10:DD:18",
           "device_name": "Unknown",
-          "rssi_mean": -92,
+          "rssi_mean": -92.0,
           "rssi_median": -92.0,
           "rssi_variance": 0.0,
           "sample_count": 1,
           "tx_power": null,
-          "rssi_readings": [
-            -92
-          ]
+          "adv_data": {},
+          "rssi_readings": []
         },
         {
           "mac_address": "EC:8D:25:F3:E3:BC",
           "device_name": "Unknown",
-          "rssi_mean": -92,
+          "rssi_mean": -92.0,
           "rssi_median": -92.0,
           "rssi_variance": 0.0,
           "sample_count": 1,
           "tx_power": null,
-          "rssi_readings": [
-            -92
-          ]
+          "adv_data": {},
+          "rssi_readings": []
         },
         {
           "mac_address": "AC:23:3F:50:45:F6",
           "device_name": "Unknown",
-          "rssi_mean": -92,
+          "rssi_mean": -92.0,
           "rssi_median": -92.0,
           "rssi_variance": 0.0,
           "sample_count": 1,
           "tx_power": null,
-          "rssi_readings": [
-            -92
-          ]
+          "adv_data": {},
+          "rssi_readings": []
         },
         {
           "mac_address": "56:10:19:8D:3C:FC",
           "device_name": "Unknown",
-          "rssi_mean": -92,
+          "rssi_mean": -92.0,
           "rssi_median": -92.0,
-          "rssi_variance": 32,
+          "rssi_variance": 32.0,
           "sample_count": 2,
           "tx_power": 12,
-          "rssi_readings": [
-            -96,
-            -88
-          ]
+          "adv_data": {},
+          "rssi_readings": []
         },
         {
           "mac_address": "65:05:71:45:2E:78",
           "device_name": "Unknown",
-          "rssi_mean": -92,
+          "rssi_mean": -92.0,
           "rssi_median": -92.0,
           "rssi_variance": 0.0,
           "sample_count": 1,
           "tx_power": 7,
-          "rssi_readings": [
-            -92
-          ]
+          "adv_data": {},
+          "rssi_readings": []
         },
         {
           "mac_address": "5B:0D:98:FB:F0:B8",
           "device_name": "Unknown",
-          "rssi_mean": -92,
+          "rssi_mean": -92.0,
           "rssi_median": -92.0,
           "rssi_variance": 0.0,
           "sample_count": 1,
           "tx_power": 12,
-          "rssi_readings": [
-            -92
-          ]
+          "adv_data": {},
+          "rssi_readings": []
         },
         {
           "mac_address": "10:DA:42:AA:7D:E4",
           "device_name": "Unknown",
-          "rssi_mean": -92,
+          "rssi_mean": -92.0,
           "rssi_median": -92.0,
           "rssi_variance": 0.0,
           "sample_count": 1,
           "tx_power": null,
-          "rssi_readings": [
-            -92
-          ]
+          "adv_data": {},
+          "rssi_readings": []
         },
         {
           "mac_address": "AC:23:3F:50:45:FD",
           "device_name": "Unknown",
-          "rssi_mean": -92,
+          "rssi_mean": -92.0,
           "rssi_median": -92.0,
           "rssi_variance": 0.0,
           "sample_count": 1,
           "tx_power": null,
-          "rssi_readings": [
-            -92
-          ]
+          "adv_data": {},
+          "rssi_readings": []
         },
         {
           "mac_address": "88:B7:EB:4E:5F:52",
@@ -863,35 +698,19 @@
           "rssi_variance": 6.42,
           "sample_count": 14,
           "tx_power": null,
-          "rssi_readings": [
-            -92,
-            -92,
-            -94,
-            -94,
-            -92,
-            -94,
-            -90,
-            -92,
-            -90,
-            -100,
-            -92,
-            -90,
-            -92,
-            -92
-          ]
+          "adv_data": {},
+          "rssi_readings": []
         },
         {
           "mac_address": "2B:DA:B4:C2:1D:3A",
           "device_name": "Unknown",
-          "rssi_mean": -93,
+          "rssi_mean": -93.0,
           "rssi_median": -93.0,
-          "rssi_variance": 18,
+          "rssi_variance": 18.0,
           "sample_count": 2,
           "tx_power": null,
-          "rssi_readings": [
-            -90,
-            -96
-          ]
+          "adv_data": {},
+          "rssi_readings": []
         },
         {
           "mac_address": "12:B2:1E:30:08:0D",
@@ -901,13 +720,8 @@
           "rssi_variance": 17.2,
           "sample_count": 5,
           "tx_power": null,
-          "rssi_readings": [
-            -100,
-            -90,
-            -90,
-            -94,
-            -92
-          ]
+          "adv_data": {},
+          "rssi_readings": []
         },
         {
           "mac_address": "68:1B:D7:96:2B:2D",
@@ -917,14 +731,8 @@
           "rssi_variance": 53.47,
           "sample_count": 6,
           "tx_power": null,
-          "rssi_readings": [
-            -92,
-            -90,
-            -90,
-            -108,
-            -88,
-            -94
-          ]
+          "adv_data": {},
+          "rssi_readings": []
         },
         {
           "mac_address": "48:F9:78:0E:DF:CB",
@@ -934,43 +742,30 @@
           "rssi_variance": 19.93,
           "sample_count": 8,
           "tx_power": null,
-          "rssi_readings": [
-            -100,
-            -96,
-            -88,
-            -96,
-            -98,
-            -88,
-            -92,
-            -92
-          ]
+          "adv_data": {},
+          "rssi_readings": []
         },
         {
           "mac_address": "72:73:A1:C6:8B:0C",
           "device_name": "Unknown",
-          "rssi_mean": -94,
+          "rssi_mean": -94.0,
           "rssi_median": -95.0,
-          "rssi_variance": 8,
+          "rssi_variance": 8.0,
           "sample_count": 4,
           "tx_power": 12,
-          "rssi_readings": [
-            -96,
-            -94,
-            -90,
-            -96
-          ]
+          "adv_data": {},
+          "rssi_readings": []
         },
         {
           "mac_address": "CD:B7:98:20:A7:B4",
           "device_name": "Unknown",
-          "rssi_mean": -94,
+          "rssi_mean": -94.0,
           "rssi_median": -94.0,
           "rssi_variance": 0.0,
           "sample_count": 1,
           "tx_power": null,
-          "rssi_readings": [
-            -94
-          ]
+          "adv_data": {},
+          "rssi_readings": []
         },
         {
           "mac_address": "64:DF:A4:2C:AF:18",
@@ -980,31 +775,19 @@
           "rssi_variance": 1.33,
           "sample_count": 3,
           "tx_power": 12,
-          "rssi_readings": [
-            -94,
-            -96,
-            -94
-          ]
+          "adv_data": {},
+          "rssi_readings": []
         },
         {
           "mac_address": "28:79:7F:4F:F3:3D",
           "device_name": "Unknown",
           "rssi_mean": -94.67,
           "rssi_median": -96.0,
-          "rssi_variance": 24,
+          "rssi_variance": 24.0,
           "sample_count": 9,
           "tx_power": null,
-          "rssi_readings": [
-            -90,
-            -90,
-            -96,
-            -96,
-            -100,
-            -98,
-            -88,
-            -92,
-            -102
-          ]
+          "adv_data": {},
+          "rssi_readings": []
         },
         {
           "mac_address": "4C:BF:B9:BE:B2:03",
@@ -1014,65 +797,52 @@
           "rssi_variance": 17.2,
           "sample_count": 5,
           "tx_power": null,
-          "rssi_readings": [
-            -94,
-            -98,
-            -100,
-            -90,
-            -92
-          ]
+          "adv_data": {},
+          "rssi_readings": []
         },
         {
           "mac_address": "71:BD:19:CE:55:CF",
           "device_name": "Unknown",
-          "rssi_mean": -95,
+          "rssi_mean": -95.0,
           "rssi_median": -95.0,
-          "rssi_variance": 50,
+          "rssi_variance": 50.0,
           "sample_count": 2,
           "tx_power": null,
-          "rssi_readings": [
-            -100,
-            -90
-          ]
+          "adv_data": {},
+          "rssi_readings": []
         },
         {
           "mac_address": "7C:28:D1:29:EF:8B",
           "device_name": "Unknown",
-          "rssi_mean": -95,
+          "rssi_mean": -95.0,
           "rssi_median": -95.0,
-          "rssi_variance": 50,
+          "rssi_variance": 50.0,
           "sample_count": 2,
           "tx_power": 0,
-          "rssi_readings": [
-            -90,
-            -100
-          ]
+          "adv_data": {},
+          "rssi_readings": []
         },
         {
           "mac_address": "4D:1A:2E:20:59:92",
           "device_name": "Unknown",
-          "rssi_mean": -95,
+          "rssi_mean": -95.0,
           "rssi_median": -95.0,
-          "rssi_variance": 2,
+          "rssi_variance": 2.0,
           "sample_count": 2,
           "tx_power": 12,
-          "rssi_readings": [
-            -94,
-            -96
-          ]
+          "adv_data": {},
+          "rssi_readings": []
         },
         {
           "mac_address": "AC:23:3F:50:45:F7",
           "device_name": "Unknown",
-          "rssi_mean": -95,
+          "rssi_mean": -95.0,
           "rssi_median": -95.0,
-          "rssi_variance": 2,
+          "rssi_variance": 2.0,
           "sample_count": 2,
           "tx_power": null,
-          "rssi_readings": [
-            -94,
-            -96
-          ]
+          "adv_data": {},
+          "rssi_readings": []
         },
         {
           "mac_address": "77:75:FD:EF:74:96",
@@ -1082,23 +852,8 @@
           "rssi_variance": 17.07,
           "sample_count": 15,
           "tx_power": null,
-          "rssi_readings": [
-            -100,
-            -100,
-            -96,
-            -102,
-            -94,
-            -92,
-            -90,
-            -96,
-            -92,
-            -94,
-            -100,
-            -98,
-            -90,
-            -90,
-            -92
-          ]
+          "adv_data": {},
+          "rssi_readings": []
         },
         {
           "mac_address": "41:AA:AF:6A:76:32",
@@ -1108,14 +863,8 @@
           "rssi_variance": 7.47,
           "sample_count": 6,
           "tx_power": null,
-          "rssi_readings": [
-            -100,
-            -96,
-            -94,
-            -96,
-            -92,
-            -94
-          ]
+          "adv_data": {},
+          "rssi_readings": []
         },
         {
           "mac_address": "67:F0:D4:48:19:58",
@@ -1125,16 +874,8 @@
           "rssi_variance": 20.29,
           "sample_count": 8,
           "tx_power": null,
-          "rssi_readings": [
-            -96,
-            -94,
-            -92,
-            -92,
-            -90,
-            -102,
-            -102,
-            -96
-          ]
+          "adv_data": {},
+          "rssi_readings": []
         },
         {
           "mac_address": "AC:23:3F:50:46:43",
@@ -1144,12 +885,8 @@
           "rssi_variance": 11.67,
           "sample_count": 4,
           "tx_power": null,
-          "rssi_readings": [
-            -96,
-            -94,
-            -100,
-            -92
-          ]
+          "adv_data": {},
+          "rssi_readings": []
         },
         {
           "mac_address": "E4:15:F6:61:6F:A9",
@@ -1159,117 +896,96 @@
           "rssi_variance": 7.78,
           "sample_count": 9,
           "tx_power": 0,
-          "rssi_readings": [
-            -96,
-            -96,
-            -98,
-            -100,
-            -92,
-            -94,
-            -92,
-            -94,
-            -98
-          ]
+          "adv_data": {},
+          "rssi_readings": []
         },
         {
           "mac_address": "0D:3C:24:0A:F5:4F",
           "device_name": "Unknown",
-          "rssi_mean": -96,
+          "rssi_mean": -96.0,
           "rssi_median": -96.0,
           "rssi_variance": 0.0,
           "sample_count": 1,
           "tx_power": null,
-          "rssi_readings": [
-            -96
-          ]
+          "adv_data": {},
+          "rssi_readings": []
         },
         {
           "mac_address": "75:9A:EE:06:D8:BF",
           "device_name": "Unknown",
-          "rssi_mean": -96,
+          "rssi_mean": -96.0,
           "rssi_median": -96.0,
-          "rssi_variance": 0,
+          "rssi_variance": 0.0,
           "sample_count": 2,
           "tx_power": 12,
-          "rssi_readings": [
-            -96,
-            -96
-          ]
+          "adv_data": {},
+          "rssi_readings": []
         },
         {
           "mac_address": "7D:33:69:97:09:3B",
           "device_name": "Unknown",
-          "rssi_mean": -96,
+          "rssi_mean": -96.0,
           "rssi_median": -96.0,
           "rssi_variance": 0.0,
           "sample_count": 1,
           "tx_power": 17,
-          "rssi_readings": [
-            -96
-          ]
+          "adv_data": {},
+          "rssi_readings": []
         },
         {
           "mac_address": "67:63:85:07:9B:4A",
           "device_name": "Unknown",
-          "rssi_mean": -96,
+          "rssi_mean": -96.0,
           "rssi_median": -96.0,
-          "rssi_variance": 0,
+          "rssi_variance": 0.0,
           "sample_count": 2,
           "tx_power": null,
-          "rssi_readings": [
-            -96,
-            -96
-          ]
+          "adv_data": {},
+          "rssi_readings": []
         },
         {
           "mac_address": "E1:F2:41:63:00:35",
           "device_name": "Unknown",
-          "rssi_mean": -96,
+          "rssi_mean": -96.0,
           "rssi_median": -96.0,
           "rssi_variance": 0.0,
           "sample_count": 1,
           "tx_power": null,
-          "rssi_readings": [
-            -96
-          ]
+          "adv_data": {},
+          "rssi_readings": []
         },
         {
           "mac_address": "AC:23:3F:50:46:79",
           "device_name": "Unknown",
-          "rssi_mean": -96,
+          "rssi_mean": -96.0,
           "rssi_median": -96.0,
-          "rssi_variance": 0,
+          "rssi_variance": 0.0,
           "sample_count": 2,
           "tx_power": null,
-          "rssi_readings": [
-            -96,
-            -96
-          ]
+          "adv_data": {},
+          "rssi_readings": []
         },
         {
           "mac_address": "EC:7F:EA:FE:F6:DC",
           "device_name": "Unknown",
-          "rssi_mean": -96,
+          "rssi_mean": -96.0,
           "rssi_median": -96.0,
           "rssi_variance": 0.0,
           "sample_count": 1,
           "tx_power": null,
-          "rssi_readings": [
-            -96
-          ]
+          "adv_data": {},
+          "rssi_readings": []
         },
         {
           "mac_address": "AC:23:3F:50:46:AA",
           "device_name": "Unknown",
-          "rssi_mean": -96,
+          "rssi_mean": -96.0,
           "rssi_median": -96.0,
-          "rssi_variance": 8,
+          "rssi_variance": 8.0,
           "sample_count": 2,
           "tx_power": null,
-          "rssi_readings": [
-            -94,
-            -98
-          ]
+          "adv_data": {},
+          "rssi_readings": []
         },
         {
           "mac_address": "74:D1:9C:0A:61:AF",
@@ -1279,68 +995,52 @@
           "rssi_variance": 21.64,
           "sample_count": 8,
           "tx_power": null,
-          "rssi_readings": [
-            -94,
-            -94,
-            -90,
-            -98,
-            -98,
-            -94,
-            -104,
-            -102
-          ]
+          "adv_data": {},
+          "rssi_readings": []
         },
         {
           "mac_address": "52:0C:45:82:79:30",
           "device_name": "Unknown",
-          "rssi_mean": -97,
+          "rssi_mean": -97.0,
           "rssi_median": -97.0,
-          "rssi_variance": 2,
+          "rssi_variance": 2.0,
           "sample_count": 2,
           "tx_power": 0,
-          "rssi_readings": [
-            -98,
-            -96
-          ]
+          "adv_data": {},
+          "rssi_readings": []
         },
         {
           "mac_address": "75:D7:8A:A6:EA:1D",
           "device_name": "Unknown",
-          "rssi_mean": -97,
+          "rssi_mean": -97.0,
           "rssi_median": -97.0,
-          "rssi_variance": 2,
+          "rssi_variance": 2.0,
           "sample_count": 2,
           "tx_power": 0,
-          "rssi_readings": [
-            -96,
-            -98
-          ]
+          "adv_data": {},
+          "rssi_readings": []
         },
         {
           "mac_address": "76:EB:F2:72:C9:D2",
           "device_name": "Unknown",
-          "rssi_mean": -97,
+          "rssi_mean": -97.0,
           "rssi_median": -97.0,
-          "rssi_variance": 98,
+          "rssi_variance": 98.0,
           "sample_count": 2,
           "tx_power": 12,
-          "rssi_readings": [
-            -90,
-            -104
-          ]
+          "adv_data": {},
+          "rssi_readings": []
         },
         {
           "mac_address": "5F:A2:3A:6B:4E:AE",
           "device_name": "Unknown",
-          "rssi_mean": -97,
+          "rssi_mean": -97.0,
           "rssi_median": -97.0,
-          "rssi_variance": 2,
+          "rssi_variance": 2.0,
           "sample_count": 2,
           "tx_power": 12,
-          "rssi_readings": [
-            -96,
-            -98
-          ]
+          "adv_data": {},
+          "rssi_readings": []
         },
         {
           "mac_address": "E4:15:F6:61:D4:BC",
@@ -1350,143 +1050,118 @@
           "rssi_variance": 3.2,
           "sample_count": 5,
           "tx_power": 0,
-          "rssi_readings": [
-            -98,
-            -96,
-            -100,
-            -96,
-            -96
-          ]
+          "adv_data": {},
+          "rssi_readings": []
         },
         {
           "mac_address": "7E:86:CB:21:88:B8",
           "device_name": "Unknown",
-          "rssi_mean": -98,
+          "rssi_mean": -98.0,
           "rssi_median": -98.0,
           "rssi_variance": 0.0,
           "sample_count": 1,
           "tx_power": 0,
-          "rssi_readings": [
-            -98
-          ]
+          "adv_data": {},
+          "rssi_readings": []
         },
         {
           "mac_address": "4D:7C:1F:93:1A:56",
           "device_name": "Unknown",
-          "rssi_mean": -98,
+          "rssi_mean": -98.0,
           "rssi_median": -98.0,
           "rssi_variance": 18.29,
           "sample_count": 8,
           "tx_power": null,
-          "rssi_readings": [
-            -100,
-            -98,
-            -96,
-            -96,
-            -90,
-            -102,
-            -104,
-            -98
-          ]
+          "adv_data": {},
+          "rssi_readings": []
         },
         {
           "mac_address": "6F:BD:7C:9D:52:DC",
           "device_name": "Unknown",
-          "rssi_mean": -98,
+          "rssi_mean": -98.0,
           "rssi_median": -98.0,
-          "rssi_variance": 8,
+          "rssi_variance": 8.0,
           "sample_count": 2,
           "tx_power": 12,
-          "rssi_readings": [
-            -96,
-            -100
-          ]
+          "adv_data": {},
+          "rssi_readings": []
         },
         {
           "mac_address": "F9:1F:65:51:9A:5C",
           "device_name": "Unknown",
-          "rssi_mean": -98,
+          "rssi_mean": -98.0,
           "rssi_median": -98.0,
           "rssi_variance": 0.0,
           "sample_count": 1,
           "tx_power": null,
-          "rssi_readings": [
-            -98
-          ]
+          "adv_data": {},
+          "rssi_readings": []
         },
         {
           "mac_address": "5E:15:F3:3D:06:46",
           "device_name": "Unknown",
-          "rssi_mean": -98,
+          "rssi_mean": -98.0,
           "rssi_median": -98.0,
           "rssi_variance": 0.0,
           "sample_count": 1,
           "tx_power": 8,
-          "rssi_readings": [
-            -98
-          ]
+          "adv_data": {},
+          "rssi_readings": []
         },
         {
           "mac_address": "C3:C7:DA:7A:E7:C7",
           "device_name": "Unknown",
-          "rssi_mean": -98,
+          "rssi_mean": -98.0,
           "rssi_median": -98.0,
           "rssi_variance": 0.0,
           "sample_count": 1,
           "tx_power": null,
-          "rssi_readings": [
-            -98
-          ]
+          "adv_data": {},
+          "rssi_readings": []
         },
         {
           "mac_address": "79:35:A0:7C:21:75",
           "device_name": "Unknown",
-          "rssi_mean": -98,
+          "rssi_mean": -98.0,
           "rssi_median": -98.0,
           "rssi_variance": 0.0,
           "sample_count": 1,
           "tx_power": null,
-          "rssi_readings": [
-            -98
-          ]
+          "adv_data": {},
+          "rssi_readings": []
         },
         {
           "mac_address": "AC:23:3F:50:45:FA",
           "device_name": "Unknown",
-          "rssi_mean": -98,
+          "rssi_mean": -98.0,
           "rssi_median": -98.0,
           "rssi_variance": 0.0,
           "sample_count": 1,
           "tx_power": null,
-          "rssi_readings": [
-            -98
-          ]
+          "adv_data": {},
+          "rssi_readings": []
         },
         {
           "mac_address": "5B:F6:6A:5F:CC:F6",
           "device_name": "Unknown",
-          "rssi_mean": -99,
+          "rssi_mean": -99.0,
           "rssi_median": -99.0,
-          "rssi_variance": 2,
+          "rssi_variance": 2.0,
           "sample_count": 2,
           "tx_power": null,
-          "rssi_readings": [
-            -98,
-            -100
-          ]
+          "adv_data": {},
+          "rssi_readings": []
         },
         {
           "mac_address": "58:85:B1:7C:31:99",
           "device_name": "Unknown",
-          "rssi_mean": -99,
+          "rssi_mean": -99.0,
           "rssi_median": -99.0,
-          "rssi_variance": 18,
+          "rssi_variance": 18.0,
           "sample_count": 2,
           "tx_power": 12,
-          "rssi_readings": [
-            -102,
-            -96
-          ]
+          "adv_data": {},
+          "rssi_readings": []
         },
         {
           "mac_address": "47:8E:56:B0:30:B0",
@@ -1496,185 +1171,162 @@
           "rssi_variance": 5.33,
           "sample_count": 3,
           "tx_power": 12,
-          "rssi_readings": [
-            -98,
-            -102,
-            -98
-          ]
+          "adv_data": {},
+          "rssi_readings": []
         },
         {
           "mac_address": "A4:AC:0F:F8:58:56",
           "device_name": "Unknown",
-          "rssi_mean": -100,
+          "rssi_mean": -100.0,
           "rssi_median": -101.0,
-          "rssi_variance": 8,
+          "rssi_variance": 8.0,
           "sample_count": 4,
           "tx_power": null,
-          "rssi_readings": [
-            -100,
-            -102,
-            -96,
-            -102
-          ]
+          "adv_data": {},
+          "rssi_readings": []
         },
         {
           "mac_address": "0C:8C:DC:E8:D6:E9",
           "device_name": "Unknown",
-          "rssi_mean": -100,
+          "rssi_mean": -100.0,
           "rssi_median": -100.0,
-          "rssi_variance": 0,
+          "rssi_variance": 0.0,
           "sample_count": 2,
           "tx_power": null,
-          "rssi_readings": [
-            -100,
-            -100
-          ]
+          "adv_data": {},
+          "rssi_readings": []
         },
         {
           "mac_address": "5D:12:11:83:0B:5B",
           "device_name": "Unknown",
-          "rssi_mean": -100,
+          "rssi_mean": -100.0,
           "rssi_median": -100.0,
           "rssi_variance": 0.0,
           "sample_count": 1,
           "tx_power": null,
-          "rssi_readings": [
-            -100
-          ]
+          "adv_data": {},
+          "rssi_readings": []
         },
         {
           "mac_address": "66:DC:7C:F0:B1:14",
           "device_name": "Unknown",
-          "rssi_mean": -100,
+          "rssi_mean": -100.0,
           "rssi_median": -100.0,
           "rssi_variance": 0.0,
           "sample_count": 1,
           "tx_power": 12,
-          "rssi_readings": [
-            -100
-          ]
+          "adv_data": {},
+          "rssi_readings": []
         },
         {
           "mac_address": "7E:11:8B:94:40:D3",
           "device_name": "Unknown",
-          "rssi_mean": -100,
+          "rssi_mean": -100.0,
           "rssi_median": -100.0,
           "rssi_variance": 0.0,
           "sample_count": 1,
           "tx_power": null,
-          "rssi_readings": [
-            -100
-          ]
+          "adv_data": {},
+          "rssi_readings": []
         },
         {
           "mac_address": "E4:15:F6:61:D4:C5",
           "device_name": "Unknown",
-          "rssi_mean": -100,
+          "rssi_mean": -100.0,
           "rssi_median": -100.0,
           "rssi_variance": 0.0,
           "sample_count": 1,
           "tx_power": null,
-          "rssi_readings": [
-            -100
-          ]
+          "adv_data": {},
+          "rssi_readings": []
         },
         {
           "mac_address": "AC:23:3F:50:46:0E",
           "device_name": "Unknown",
-          "rssi_mean": -100,
+          "rssi_mean": -100.0,
           "rssi_median": -100.0,
           "rssi_variance": 0.0,
           "sample_count": 1,
           "tx_power": null,
-          "rssi_readings": [
-            -100
-          ]
+          "adv_data": {},
+          "rssi_readings": []
         },
         {
           "mac_address": "74:43:4B:08:15:F8",
           "device_name": "Unknown",
-          "rssi_mean": -100,
+          "rssi_mean": -100.0,
           "rssi_median": -100.0,
           "rssi_variance": 0.0,
           "sample_count": 1,
           "tx_power": 0,
-          "rssi_readings": [
-            -100
-          ]
+          "adv_data": {},
+          "rssi_readings": []
         },
         {
           "mac_address": "E4:26:D2:46:A4:A0",
           "device_name": "Unknown",
-          "rssi_mean": -100,
+          "rssi_mean": -100.0,
           "rssi_median": -100.0,
           "rssi_variance": 0.0,
           "sample_count": 1,
           "tx_power": null,
-          "rssi_readings": [
-            -100
-          ]
+          "adv_data": {},
+          "rssi_readings": []
         },
         {
           "mac_address": "3A:F4:88:62:BC:D8",
           "device_name": "Unknown",
-          "rssi_mean": -100,
+          "rssi_mean": -100.0,
           "rssi_median": -100.0,
           "rssi_variance": 0.0,
           "sample_count": 1,
           "tx_power": null,
-          "rssi_readings": [
-            -100
-          ]
+          "adv_data": {},
+          "rssi_readings": []
         },
         {
           "mac_address": "45:7C:5E:79:81:68",
           "device_name": "Unknown",
-          "rssi_mean": -100,
+          "rssi_mean": -100.0,
           "rssi_median": -100.0,
-          "rssi_variance": 8,
+          "rssi_variance": 8.0,
           "sample_count": 2,
           "tx_power": null,
-          "rssi_readings": [
-            -102,
-            -98
-          ]
+          "adv_data": {},
+          "rssi_readings": []
         },
         {
           "mac_address": "E4:15:F6:61:E2:E2",
           "device_name": "Unknown",
-          "rssi_mean": -100,
+          "rssi_mean": -100.0,
           "rssi_median": -100.0,
-          "rssi_variance": 0,
+          "rssi_variance": 0.0,
           "sample_count": 2,
           "tx_power": null,
-          "rssi_readings": [
-            -100,
-            -100
-          ]
+          "adv_data": {},
+          "rssi_readings": []
         },
         {
           "mac_address": "50:E7:BB:C6:2C:E0",
           "device_name": "Unknown",
-          "rssi_mean": -100,
+          "rssi_mean": -100.0,
           "rssi_median": -100.0,
           "rssi_variance": 0.0,
           "sample_count": 1,
           "tx_power": null,
-          "rssi_readings": [
-            -100
-          ]
+          "adv_data": {},
+          "rssi_readings": []
         },
         {
           "mac_address": "D7:80:50:A7:DD:83",
           "device_name": "Unknown",
-          "rssi_mean": -100,
+          "rssi_mean": -100.0,
           "rssi_median": -100.0,
           "rssi_variance": 0.0,
           "sample_count": 1,
           "tx_power": null,
-          "rssi_readings": [
-            -100
-          ]
+          "adv_data": {},
+          "rssi_readings": []
         },
         {
           "mac_address": "5C:A0:40:62:29:16",
@@ -1684,29 +1336,19 @@
           "rssi_variance": 9.07,
           "sample_count": 6,
           "tx_power": -16,
-          "rssi_readings": [
-            -100,
-            -96,
-            -100,
-            -104,
-            -100,
-            -104
-          ]
+          "adv_data": {},
+          "rssi_readings": []
         },
         {
           "mac_address": "18:98:CB:5E:78:90",
           "device_name": "Unknown",
-          "rssi_mean": -101,
+          "rssi_mean": -101.0,
           "rssi_median": -101.0,
           "rssi_variance": 6.67,
           "sample_count": 4,
           "tx_power": null,
-          "rssi_readings": [
-            -104,
-            -98,
-            -102,
-            -100
-          ]
+          "adv_data": {},
+          "rssi_readings": []
         },
         {
           "mac_address": "AC:23:3F:50:46:40",
@@ -1716,271 +1358,436 @@
           "rssi_variance": 9.33,
           "sample_count": 3,
           "tx_power": null,
-          "rssi_readings": [
-            -102,
-            -104,
-            -98
-          ]
+          "adv_data": {},
+          "rssi_readings": []
         },
         {
           "mac_address": "E4:15:F6:61:D4:66",
           "device_name": "Cidron",
-          "rssi_mean": -102,
+          "rssi_mean": -102.0,
           "rssi_median": -102.0,
           "rssi_variance": 11.2,
           "sample_count": 6,
           "tx_power": 0,
-          "rssi_readings": [
-            -102,
-            -104,
-            -102,
-            -106,
-            -102,
-            -96
-          ]
+          "adv_data": {},
+          "rssi_readings": []
         },
         {
           "mac_address": "6C:C8:94:0B:F2:E8",
           "device_name": "Unknown",
-          "rssi_mean": -102,
+          "rssi_mean": -102.0,
           "rssi_median": -102.0,
           "rssi_variance": 0.0,
           "sample_count": 1,
           "tx_power": 7,
-          "rssi_readings": [
-            -102
-          ]
+          "adv_data": {},
+          "rssi_readings": []
         },
         {
           "mac_address": "51:8C:D8:13:23:BA",
           "device_name": "Unknown",
-          "rssi_mean": -102,
+          "rssi_mean": -102.0,
           "rssi_median": -102.0,
-          "rssi_variance": 0,
+          "rssi_variance": 0.0,
           "sample_count": 2,
           "tx_power": 12,
-          "rssi_readings": [
-            -102,
-            -102
-          ]
+          "adv_data": {},
+          "rssi_readings": []
         },
         {
           "mac_address": "58:E0:59:52:00:08",
           "device_name": "Unknown",
-          "rssi_mean": -102,
+          "rssi_mean": -102.0,
           "rssi_median": -102.0,
           "rssi_variance": 0.0,
           "sample_count": 1,
           "tx_power": null,
-          "rssi_readings": [
-            -102
-          ]
+          "adv_data": {},
+          "rssi_readings": []
         },
         {
           "mac_address": "7A:48:58:87:7F:34",
           "device_name": "Unknown",
-          "rssi_mean": -102,
+          "rssi_mean": -102.0,
           "rssi_median": -102.0,
           "rssi_variance": 0.0,
           "sample_count": 1,
           "tx_power": 12,
-          "rssi_readings": [
-            -102
-          ]
+          "adv_data": {},
+          "rssi_readings": []
         },
         {
           "mac_address": "54:CA:C7:F3:63:C7",
           "device_name": "Unknown",
-          "rssi_mean": -102,
+          "rssi_mean": -102.0,
           "rssi_median": -102.0,
-          "rssi_variance": 32,
+          "rssi_variance": 32.0,
           "sample_count": 2,
           "tx_power": null,
-          "rssi_readings": [
-            -106,
-            -98
-          ]
+          "adv_data": {},
+          "rssi_readings": []
         },
         {
           "mac_address": "54:0A:DD:16:42:65",
           "device_name": "Unknown",
-          "rssi_mean": -102,
+          "rssi_mean": -102.0,
           "rssi_median": -102.0,
           "rssi_variance": 0.0,
           "sample_count": 1,
           "tx_power": null,
-          "rssi_readings": [
-            -102
-          ]
+          "adv_data": {},
+          "rssi_readings": []
         },
         {
           "mac_address": "CC:BC:74:75:97:54",
           "device_name": "Unknown",
-          "rssi_mean": -102,
+          "rssi_mean": -102.0,
           "rssi_median": -102.0,
           "rssi_variance": 0.0,
           "sample_count": 1,
           "tx_power": null,
-          "rssi_readings": [
-            -102
-          ]
+          "adv_data": {},
+          "rssi_readings": []
         },
         {
           "mac_address": "EB:D1:4E:BD:0D:86",
           "device_name": "Unknown",
-          "rssi_mean": -102,
+          "rssi_mean": -102.0,
           "rssi_median": -102.0,
           "rssi_variance": 0.0,
           "sample_count": 1,
           "tx_power": null,
-          "rssi_readings": [
-            -102
-          ]
+          "adv_data": {},
+          "rssi_readings": []
         },
         {
           "mac_address": "0E:50:9A:6B:AB:9D",
           "device_name": "Unknown",
-          "rssi_mean": -102,
+          "rssi_mean": -102.0,
           "rssi_median": -102.0,
           "rssi_variance": 0.0,
           "sample_count": 1,
           "tx_power": null,
-          "rssi_readings": [
-            -102
-          ]
+          "adv_data": {},
+          "rssi_readings": []
         },
         {
           "mac_address": "6D:4C:68:B2:FE:4B",
           "device_name": "Unknown",
-          "rssi_mean": -102,
+          "rssi_mean": -102.0,
           "rssi_median": -102.0,
           "rssi_variance": 0.0,
           "sample_count": 1,
           "tx_power": 8,
-          "rssi_readings": [
-            -102
-          ]
+          "adv_data": {},
+          "rssi_readings": []
         },
         {
           "mac_address": "6F:F8:91:3B:45:C8",
           "device_name": "Unknown",
-          "rssi_mean": -102,
+          "rssi_mean": -102.0,
           "rssi_median": -102.0,
-          "rssi_variance": 8,
+          "rssi_variance": 8.0,
           "sample_count": 2,
           "tx_power": null,
-          "rssi_readings": [
-            -104,
-            -100
-          ]
+          "adv_data": {},
+          "rssi_readings": []
         },
         {
           "mac_address": "6C:D6:F2:B3:4C:92",
           "device_name": "Unknown",
-          "rssi_mean": -102,
+          "rssi_mean": -102.0,
           "rssi_median": -102.0,
           "rssi_variance": 0.0,
           "sample_count": 1,
           "tx_power": 12,
-          "rssi_readings": [
-            -102
-          ]
+          "adv_data": {},
+          "rssi_readings": []
         },
         {
           "mac_address": "45:23:D6:EC:1B:20",
           "device_name": "Unknown",
-          "rssi_mean": -102,
+          "rssi_mean": -102.0,
           "rssi_median": -102.0,
           "rssi_variance": 0.0,
           "sample_count": 1,
           "tx_power": 0,
-          "rssi_readings": [
-            -102
-          ]
+          "adv_data": {},
+          "rssi_readings": []
         },
         {
           "mac_address": "28:07:08:A8:32:C9",
           "device_name": "Unknown",
-          "rssi_mean": -103,
+          "rssi_mean": -103.0,
           "rssi_median": -103.0,
-          "rssi_variance": 18,
+          "rssi_variance": 18.0,
           "sample_count": 2,
           "tx_power": null,
-          "rssi_readings": [
-            -106,
-            -100
-          ]
+          "adv_data": {},
+          "rssi_readings": []
         },
         {
           "mac_address": "5D:4E:DE:54:48:4A",
           "device_name": "Unknown",
-          "rssi_mean": -104,
+          "rssi_mean": -104.0,
           "rssi_median": -104.0,
           "rssi_variance": 0.0,
           "sample_count": 1,
           "tx_power": 17,
-          "rssi_readings": [
-            -104
-          ]
+          "adv_data": {},
+          "rssi_readings": []
         },
         {
           "mac_address": "AC:23:3F:50:46:42",
           "device_name": "Unknown",
-          "rssi_mean": -104,
+          "rssi_mean": -104.0,
           "rssi_median": -104.0,
           "rssi_variance": 0.0,
           "sample_count": 1,
           "tx_power": null,
-          "rssi_readings": [
-            -104
-          ]
+          "adv_data": {},
+          "rssi_readings": []
         },
         {
           "mac_address": "0C:17:73:E0:99:A1",
           "device_name": "Unknown",
-          "rssi_mean": -104,
+          "rssi_mean": -104.0,
           "rssi_median": -104.0,
           "rssi_variance": 0.0,
           "sample_count": 1,
           "tx_power": null,
-          "rssi_readings": [
-            -104
-          ]
+          "adv_data": {},
+          "rssi_readings": []
         },
         {
           "mac_address": "FB:0A:03:1D:4A:EF",
           "device_name": "Unknown",
-          "rssi_mean": -104,
+          "rssi_mean": -104.0,
           "rssi_median": -104.0,
           "rssi_variance": 0.0,
           "sample_count": 1,
           "tx_power": null,
-          "rssi_readings": [
-            -104
-          ]
+          "adv_data": {},
+          "rssi_readings": []
         },
         {
           "mac_address": "AC:23:3F:50:46:D1",
           "device_name": "Unknown",
-          "rssi_mean": -106,
+          "rssi_mean": -106.0,
           "rssi_median": -106.0,
           "rssi_variance": 0.0,
           "sample_count": 1,
           "tx_power": null,
-          "rssi_readings": [
-            -106
-          ]
+          "adv_data": {},
+          "rssi_readings": []
         },
         {
           "mac_address": "E4:15:F6:61:6F:88",
           "device_name": "Unknown",
-          "rssi_mean": -108,
+          "rssi_mean": -108.0,
           "rssi_median": -108.0,
           "rssi_variance": 0.0,
           "sample_count": 1,
           "tx_power": null,
+          "adv_data": {},
+          "rssi_readings": []
+        }
+      ]
+    },
+    {
+      "timestamp": "2026-09-28T13:00:20.470015",
+      "true_grid": {
+        "row": 95,
+        "col": 55
+      },
+      "app_reported_grid": {
+        "row": 0,
+        "col": 0
+      },
+      "scan_duration_seconds": 3.0,
+      "notes": "",
+      "scan_results": [
+        {
+          "mac_address": "65:F4:14:E7:10:61",
+          "device_name": "CMF Buds 2a",
+          "rssi_mean": -70,
+          "rssi_median": -70.0,
+          "rssi_variance": 0.0,
+          "sample_count": 1,
+          "tx_power": -9,
+          "adv_data": {
+            "Mfg:0x0ccb": "0001b185ee99e7edb03c",
+            "Srv:0000fe2c-0000-1000-8000-00805f9b34fb": "005043222041d111553346467f"
+          },
           "rssi_readings": [
-            -108
+            -70
+          ]
+        },
+        {
+          "mac_address": "2E:52:21:A7:ED:6D",
+          "device_name": "Unknown",
+          "rssi_mean": -90,
+          "rssi_median": -90.0,
+          "rssi_variance": 0.0,
+          "sample_count": 1,
+          "tx_power": null,
+          "adv_data": {
+            "Mfg:0x0006": "01092022fdeab7b1efec83cdbfb4a83e2df879746d84e7f7aaf718"
+          },
+          "rssi_readings": [
+            -90
+          ]
+        },
+        {
+          "mac_address": "5B:1E:4B:02:6D:D9",
+          "device_name": "DESKTOP-R906D1D",
+          "rssi_mean": -94,
+          "rssi_median": -94.0,
+          "rssi_variance": 0.0,
+          "sample_count": 1,
+          "tx_power": null,
+          "adv_data": {},
+          "rssi_readings": [
+            -94
+          ]
+        },
+        {
+          "mac_address": "45:8D:BC:C2:55:3A",
+          "device_name": "Unknown",
+          "rssi_mean": -94,
+          "rssi_median": -94.0,
+          "rssi_variance": 0,
+          "sample_count": 2,
+          "tx_power": 11,
+          "adv_data": {
+            "Mfg:0x004c": "1006061d1ea5e728"
+          },
+          "rssi_readings": [
+            -94,
+            -94
+          ]
+        },
+        {
+          "mac_address": "78:AC:A1:91:05:57",
+          "device_name": "Unknown",
+          "rssi_mean": -95,
+          "rssi_median": -95.0,
+          "rssi_variance": 2,
+          "sample_count": 2,
+          "tx_power": -3,
+          "adv_data": {
+            "Srv:0000fe2c-0000-1000-8000-00805f9b34fb": "0000",
+            "Mfg:0x012d": "04000202b0310901d48f13427800020033000000"
+          },
+          "rssi_readings": [
+            -96,
+            -94
+          ]
+        },
+        {
+          "mac_address": "73:65:8E:D3:9A:22",
+          "device_name": "Unknown",
+          "rssi_mean": -96,
+          "rssi_median": -96.0,
+          "rssi_variance": 0.0,
+          "sample_count": 1,
+          "tx_power": null,
+          "adv_data": {
+            "Srv:3e1d50cd-7e3e-427d-8e1c-b78aa87fe624": "0900"
+          },
+          "rssi_readings": [
+            -96
+          ]
+        },
+        {
+          "mac_address": "1A:A0:1E:5C:08:5C",
+          "device_name": "Unknown",
+          "rssi_mean": -96,
+          "rssi_median": -96.0,
+          "rssi_variance": 0.0,
+          "sample_count": 1,
+          "tx_power": null,
+          "adv_data": {
+            "Srv:0000fcf1-0000-1000-8000-00805f9b34fb": "04ec85df93e7548bad308914bac11f2a0c84731d"
+          },
+          "rssi_readings": [
+            -96
+          ]
+        },
+        {
+          "mac_address": "A0:9E:1A:8B:9A:DD",
+          "device_name": "Polar Vantage M 8B9ADD22",
+          "rssi_mean": -96,
+          "rssi_median": -96.0,
+          "rssi_variance": 0.0,
+          "sample_count": 1,
+          "tx_power": null,
+          "adv_data": {
+            "Mfg:0x006b": "7208010e1b0300000000"
+          },
+          "rssi_readings": [
+            -96
+          ]
+        },
+        {
+          "mac_address": "13:79:4A:35:09:82",
+          "device_name": "Unknown",
+          "rssi_mean": -97,
+          "rssi_median": -97.0,
+          "rssi_variance": 2,
+          "sample_count": 2,
+          "tx_power": null,
+          "adv_data": {
+            "Srv:0000fcf1-0000-1000-8000-00805f9b34fb": "0468817edaba7364c9c2c9f561d9ffa451e55b"
+          },
+          "rssi_readings": [
+            -96,
+            -98
+          ]
+        },
+        {
+          "mac_address": "E1:01:23:5B:83:6C",
+          "device_name": "Unknown",
+          "rssi_mean": -98,
+          "rssi_median": -98.0,
+          "rssi_variance": 0.0,
+          "sample_count": 1,
+          "tx_power": null,
+          "adv_data": {
+            "Mfg:0x004c": "12020001"
+          },
+          "rssi_readings": [
+            -98
+          ]
+        },
+        {
+          "mac_address": "2E:93:1F:3D:D6:ED",
+          "device_name": "Unknown",
+          "rssi_mean": -100,
+          "rssi_median": -100.0,
+          "rssi_variance": 0.0,
+          "sample_count": 1,
+          "tx_power": null,
+          "adv_data": {
+            "Srv:0000fef3-0000-1000-8000-00805f9b34fb": "4a17235858514711328ac302aa73d2c65dbcfd18d3c9d04cd6c77d"
+          },
+          "rssi_readings": [
+            -100
+          ]
+        },
+        {
+          "mac_address": "F0:3E:05:24:D7:FF",
+          "device_name": "GR_24D7FF",
+          "rssi_mean": -100,
+          "rssi_median": -100.0,
+          "rssi_variance": 0.0,
+          "sample_count": 1,
+          "tx_power": 2,
+          "adv_data": {
+            "Mfg:0x065f": "da010702905300000300"
+          },
+          "rssi_readings": [
+            -100
           ]
         }
       ]

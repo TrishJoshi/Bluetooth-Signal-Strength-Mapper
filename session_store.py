@@ -26,9 +26,9 @@ _CSV_COLUMNS = [
     "mac_address", "device_name",
     "rssi_mean", "rssi_median", "rssi_variance",
     "sample_count", "tx_power",
+    "adv_data",
     "scan_duration_seconds", "notes",
 ]
-
 
 # ---------------------------------------------------------------------------
 # Write functions
@@ -166,7 +166,7 @@ def _measurement_to_rows(m: Measurement) -> list[dict]:
     }
     if not m.scan_results:
         return [{**base, "mac_address": "", "device_name": "", "rssi_mean": "",
-                 "rssi_median": "", "rssi_variance": "", "sample_count": 0, "tx_power": ""}]
+                 "rssi_median": "", "rssi_variance": "", "sample_count": 0, "tx_power": "", "adv_data": ""}]
     return [
         {**base,
          "mac_address": r.mac_address,
@@ -175,7 +175,8 @@ def _measurement_to_rows(m: Measurement) -> list[dict]:
          "rssi_median": r.rssi_median,
          "rssi_variance": r.rssi_variance,
          "sample_count": r.sample_count,
-         "tx_power": r.tx_power if r.tx_power is not None else ""}
+         "tx_power": r.tx_power if r.tx_power is not None else "",
+         "adv_data": json.dumps(r.adv_data) if r.adv_data else ""}
         for r in m.scan_results
     ]
 
@@ -196,6 +197,7 @@ def _measurement_to_dict(m: Measurement) -> dict:
                 "rssi_variance": r.rssi_variance,
                 "sample_count": r.sample_count,
                 "tx_power": r.tx_power,
+                "adv_data": r.adv_data,
                 "rssi_readings": r.rssi_readings,
             }
             for r in m.scan_results
@@ -205,6 +207,9 @@ def _measurement_to_dict(m: Measurement) -> dict:
 
 def _row_to_scan_result(row: dict) -> ScanResult | None:
     try:
+        adv_data_str = row.get("adv_data", "")
+        adv_data = json.loads(adv_data_str) if adv_data_str else {}
+        
         return ScanResult(
             mac_address=row["mac_address"],
             device_name=row.get("device_name", "Unknown"),
@@ -213,6 +218,7 @@ def _row_to_scan_result(row: dict) -> ScanResult | None:
             rssi_variance=float(row["rssi_variance"]) if row.get("rssi_variance") else 0.0,
             sample_count=int(row["sample_count"]) if row.get("sample_count") else 0,
             tx_power=int(row["tx_power"]) if row.get("tx_power") else None,
+            adv_data=adv_data,
             rssi_readings=[],
         )
     except (ValueError, KeyError):
