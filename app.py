@@ -93,7 +93,9 @@ def _init_session_state() -> None:
         "measurements": [],              # list[Measurement]
         "selected_cell": GridCell(0, 0), # Ground-truth position
         "app_reported_cell": GridCell(0, 0),
-        "click_mode": "true",            # "true" | "app"
+        "capture_state": "idle",         # "idle" | "awaiting_app_click"
+        "pending_scan_results": [],
+        "pending_true_cell": None,
         "continuous_running": False,
         "continuous_settings": {},       # snapshot of config when started
         "continuous_next_scan_at": 0.0,  # Unix timestamp
@@ -254,7 +256,7 @@ def _activate_campaign(
     st.session_state.measurements = measurements
     st.session_state.selected_cell = GridCell(0, 0)
     st.session_state.app_reported_cell = GridCell(0, 0)
-    st.session_state.click_mode = "true"
+    st.session_state.capture_state = "idle"
     st.session_state.continuous_running = False
     # Seed slider values from campaign settings (must be set before widgets render).
     st.session_state.pixels_per_meter = campaign.pixels_per_meter
@@ -354,18 +356,9 @@ def _show_campaign_screen() -> None:
     col_canvas, col_controls = st.columns([4, 1])
 
     with col_canvas:
-        # Mode toggle — controls what a canvas click selects.
-        st.segmented_control(
-            "Click mode",
-            options=["true", "app"],
-            format_func=lambda m: (
-                ":material/my_location: True position" if m == "true"
-                else ":material/pin_drop: App reported"
-            ),
-            key="click_mode",
-            label_visibility="collapsed",
-        )
-
+        if st.session_state.capture_state == "awaiting_app_click":
+            st.error("🚨 **BLE SCAN COMPLETE** 🚨\n\nClick on the map to indicate where the **App** thinks you are to finish recording.")
+            
         # Canvas wrapped in a fixed-height scrollable container.
         with st.container(height=680, border=False):
             canvas_result = st_canvas(
@@ -382,51 +375,63 @@ def _show_campaign_screen() -> None:
         # Map canvas click → grid cell.
         if canvas_result.json_data:
             objects = canvas_result.json_data.get("objects", [])
-            if objects:
-                last = objects[-1]
-                orig_x = last["left"] / display_zoom
-                orig_y = last["top"] / display_zoom
-                row, col = cell_from_click(orig_x, orig_y, grid_spacing_px)
-                clicked = GridCell(row, col)
-                click_mode = st.session_state.get("click_mode", "true")
-                if click_mode == "true" and clicked != selected:
-                    st.session_state.selected_cell = clicked
-                    st.rerun()
-                elif click_mode == "app" and clicked != app_reported:
-                    st.session_state.app_reported_cell = clicked
-                    st.rerun()
+            curr_clicks = len(objects)
+            track_key = f"clicks_{canvas_key}"
+            last_clicks = st.session_state.get(track_key, -1)
+            
+            if curr_clicks != last_clicks and curr_clicks > 0:
+                st.session_state[track_key] = curr_clicks
+                if curr_clicks > (last_clicks if last_clicks != -1 else 0):
+                    last_obj = objects[-1]
+                    orig_x = last_obj["left"] / display_zoom
+                    orig_y = last_obj["top"] / display_zoom
+                    row, col = cell_from_click(orig_x, orig_y, grid_spacing_px)
+                    clicked = GridCell(row, col)
+                    
+                    if st.session_state.capture_state == "awaiting_app_click":
+                        _finalize_capture(clicked, campaign)
+                        st.rerun()
+                    elif clicked != selected:
+                        st.session_state.selected_cell = clicked
+                        st.rerun()
 
     with col_controls:
-        # --- Cell status ---
-        st.subheader("Position")
-        st.metric(":material/my_location: True cell", str(selected), help="Red highlight on map")
-        st.metric(":material/pin_drop: App cell", str(app_reported), help="Gold highlight on map")
-
-        # --- Arrow pad buttons ---
-        r_up = st.columns(3)
-        with r_up[1]:
-            if st.button(":material/arrow_upward:", key="nav_n", help="North (↑)"):
-                _move_selected("N", max_rows, max_cols)
-        r_mid = st.columns(3)
-        with r_mid[0]:
-            if st.button(":material/arrow_back:", key="nav_w", help="West (←)"):
-                _move_selected("W", max_rows, max_cols)
-        with r_mid[1]:
-            st.button(":material/location_on:", disabled=True, key="nav_ctr")
-        with r_mid[2]:
-            if st.button(":material/arrow_forward:", key="nav_e", help="East (→)"):
-                _move_selected("E", max_rows, max_cols)
-        r_down = st.columns(3)
-        with r_down[1]:
-            if st.button(":material/arrow_downward:", key="nav_s", help="South (↓)"):
-                _move_selected("S", max_rows, max_cols)
-
-        st.divider()
-
-        # --- Capture ---
-        st.subheader("Capture")
-        if st.button(":material/sensors: Capture snapshot", type="primary", key="capture_btn"):
-            _run_capture(selected, app_reported, scan_duration, mac_filter, campaign)
+        if st.session_state.capture_state == "awaiting_app_click":
+            st.warning("Waiting for app location...")
+            if st.button(":material/cancel: Cancel Capture", type="secondary", use_container_width=True):
+                st.session_state.capture_state = "idle"
+                st.rerun()
+        else:
+            # --- Cell status ---
+            st.subheader("Position")
+            st.metric(":material/my_location: True cell", str(selected), help="Red highlight on map")
+            st.metric(":material/pin_drop: App cell", str(app_reported), help="Gold highlight on map")
+    
+            # --- Arrow pad buttons ---
+            r_up = st.columns(3)
+            with r_up[1]:
+                if st.button(":material/arrow_upward:", key="nav_n", help="North (↑)"):
+                    _move_selected("N", max_rows, max_cols)
+            r_mid = st.columns(3)
+            with r_mid[0]:
+                if st.button(":material/arrow_back:", key="nav_w", help="West (←)"):
+                    _move_selected("W", max_rows, max_cols)
+            with r_mid[1]:
+                st.button(":material/location_on:", disabled=True, key="nav_ctr")
+            with r_mid[2]:
+                if st.button(":material/arrow_forward:", key="nav_e", help="East (→)"):
+                    _move_selected("E", max_rows, max_cols)
+            r_down = st.columns(3)
+            with r_down[1]:
+                if st.button(":material/arrow_downward:", key="nav_s", help="South (↓)"):
+                    _move_selected("S", max_rows, max_cols)
+    
+            st.divider()
+    
+            # --- Capture ---
+            st.subheader("Capture")
+            if st.button(":material/sensors: Capture snapshot", type="primary", key="capture_btn"):
+                _run_capture(selected, app_reported, scan_duration, mac_filter, campaign)
 
         st.divider()
 
@@ -699,10 +704,22 @@ def _run_capture(
     with st.spinner(f"Scanning BLE for {scan_duration}s…"):
         scan_results = asyncio.run(scan_ble_devices(scan_duration, mac_filter or None))
 
+    st.session_state.pending_scan_results = scan_results
+    st.session_state.pending_true_cell = selected
+    st.session_state.capture_state = "awaiting_app_click"
+    st.session_state.scan_duration_s_cache = scan_duration
+    st.rerun()
+
+
+def _finalize_capture(app_cell: GridCell, campaign: Campaign | None) -> None:
+    scan_results = st.session_state.pending_scan_results
+    true_cell = st.session_state.pending_true_cell
+    scan_duration = st.session_state.get("scan_duration_s_cache", 3)
+
     measurement = Measurement(
         timestamp=datetime.now(),
-        true_grid=GridCell(selected.row, selected.col),
-        app_reported_grid=GridCell(app_reported.row, app_reported.col),
+        true_grid=GridCell(true_cell.row, true_cell.col),
+        app_reported_grid=GridCell(app_cell.row, app_cell.col),
         scan_results=scan_results,
         scan_duration_seconds=float(scan_duration),
     )
@@ -712,7 +729,9 @@ def _run_capture(
         append_measurement_csv(campaign.measurements_csv_path, measurement)
         _autosave_json(campaign)
 
-    st.success(f":material/check_circle: Captured {len(scan_results)} device(s) at {selected}.")
+    st.session_state.app_reported_cell = app_cell
+    st.session_state.capture_state = "idle"
+    st.success(f":material/check_circle: Captured {len(scan_results)} device(s) at {true_cell} (App: {app_cell}).")
 
 
 def _autosave_json(campaign: Campaign) -> None:
