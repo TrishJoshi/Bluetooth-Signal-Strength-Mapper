@@ -108,7 +108,8 @@ def composite_grid(
     if display_scale != 1.0:
         new_w = max(1, int(result.width * display_scale))
         new_h = max(1, int(result.height * display_scale))
-        result = result.resize((new_w, new_h), Image.LANCZOS)
+        # NEAREST is instantly fast compared to LANCZOS and keeps the grid lines perfectly crisp
+        result = result.resize((new_w, new_h), Image.NEAREST)
 
     return result
 
