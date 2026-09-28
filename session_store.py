@@ -23,6 +23,7 @@ _CSV_COLUMNS = [
     "timestamp",
     "true_row", "true_col",
     "app_row", "app_col",
+    "beacon_overhead", "beacon_id", "beacon_major", "beacon_minor",
     "mac_address", "device_name",
     "rssi_mean", "rssi_median", "rssi_variance",
     "sample_count", "tx_power",
@@ -132,7 +133,7 @@ def load_measurements_from_csv(csv_path: Path) -> list[Measurement]:
         first = rows_group[0]
         scan_results = [_row_to_scan_result(r) for r in rows_group if r.get("mac_address")]
         try:
-            measurements.append(Measurement(
+            m = Measurement(
                 timestamp=datetime.fromisoformat(first["timestamp"]),
                 true_grid=GridCell(int(first["true_row"]), int(first["true_col"])),
                 app_reported_grid=GridCell(
@@ -141,8 +142,17 @@ def load_measurements_from_csv(csv_path: Path) -> list[Measurement]:
                 ),
                 scan_results=[r for r in scan_results if r is not None],
                 scan_duration_seconds=float(first.get("scan_duration_seconds") or 3.0),
+                beacon_overhead=(str(first.get("beacon_overhead", "")).lower() == "true"),
+                beacon_id=first.get("beacon_id", ""),
                 notes=first.get("notes", ""),
-            ))
+            )
+            
+            major_str = first.get("beacon_major", "")
+            if major_str: m.beacon_major = int(major_str)
+            minor_str = first.get("beacon_minor", "")
+            if minor_str: m.beacon_minor = int(minor_str)
+            
+            measurements.append(m)
         except (ValueError, KeyError):
             pass
 
@@ -161,6 +171,10 @@ def _measurement_to_rows(m: Measurement) -> list[dict]:
         "true_col": m.true_grid.col,
         "app_row": m.app_reported_grid.row,
         "app_col": m.app_reported_grid.col,
+        "beacon_overhead": str(m.beacon_overhead),
+        "beacon_id": m.beacon_id,
+        "beacon_major": str(m.beacon_major) if m.beacon_major is not None else "",
+        "beacon_minor": str(m.beacon_minor) if m.beacon_minor is not None else "",
         "scan_duration_seconds": m.scan_duration_seconds,
         "notes": m.notes,
     }
@@ -186,6 +200,10 @@ def _measurement_to_dict(m: Measurement) -> dict:
         "timestamp": m.timestamp.isoformat(),
         "true_grid": {"row": m.true_grid.row, "col": m.true_grid.col},
         "app_reported_grid": {"row": m.app_reported_grid.row, "col": m.app_reported_grid.col},
+        "beacon_overhead": m.beacon_overhead,
+        "beacon_id": m.beacon_id,
+        "beacon_major": m.beacon_major,
+        "beacon_minor": m.beacon_minor,
         "scan_duration_seconds": m.scan_duration_seconds,
         "notes": m.notes,
         "scan_results": [

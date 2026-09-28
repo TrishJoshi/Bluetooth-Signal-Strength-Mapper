@@ -59,4 +59,8 @@ class Measurement:
     app_reported_grid: GridCell
     scan_results: list[ScanResult]
     scan_duration_seconds: float
+    beacon_overhead: bool = False
+    beacon_major: Optional[int] = None
+    beacon_minor: Optional[int] = None
+    beacon_id: str = ""
     notes: str = ""
