@@ -8,7 +8,7 @@ No global state, no side effects.
 from __future__ import annotations
 
 import numpy as np
-from PIL import Image, ImageDraw
+from PIL import Image, ImageDraw, ImageFont
 
 # Cell-state fill colours (RGBA).
 _STATE_COLORS: dict[str, tuple[int, int, int, int]] = {
@@ -101,6 +101,36 @@ def composite_grid(
         draw.line([(x, 0), (x, h)], fill=line_color, width=line_width)
     for y in range(0, h + grid_spacing_px, grid_spacing_px):
         draw.line([(0, y), (w, y)], fill=line_color, width=line_width)
+
+    # --- Layer 4b: grid numbers ---
+    font = ImageFont.load_default()
+    label_color = (200, 0, 0, 255)
+    bg_color = (255, 255, 255, 200)
+
+    # Columns across the top (X axis)
+    for col, x in enumerate(range(0, w, grid_spacing_px)):
+        text = str(col)
+        px, py = x + 4, 4
+        try:
+            bbox = draw.textbbox((px, py), text, font=font)
+            draw.rectangle([bbox[0] - 2, bbox[1] - 2, bbox[2] + 2, bbox[3] + 2], fill=bg_color)
+        except AttributeError:
+            # Fallback for older PIL versions without textbbox
+            pass
+        draw.text((px, py), text, fill=label_color, font=font)
+
+    # Rows down the left (Y axis) - skipping row 0 to avoid overlapping col 0
+    for row, y in enumerate(range(0, h, grid_spacing_px)):
+        if row == 0:
+            continue
+        text = str(row)
+        px, py = 4, y + 4
+        try:
+            bbox = draw.textbbox((px, py), text, font=font)
+            draw.rectangle([bbox[0] - 2, bbox[1] - 2, bbox[2] + 2, bbox[3] + 2], fill=bg_color)
+        except AttributeError:
+            pass
+        draw.text((px, py), text, fill=label_color, font=font)
 
     result = Image.alpha_composite(result, overlay).convert("RGB")
 

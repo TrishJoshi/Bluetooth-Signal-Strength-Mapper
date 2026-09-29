@@ -1,8 +1,8 @@
 {
   "name": "Test",
   "created_at": "2026-09-28T12:58:15.423029",
-  "pixels_per_meter": 60.0,
+  "pixels_per_meter": 60,
   "cell_size_meters": 1.0,
-  "scan_duration": 3,
+  "scan_duration": 10,
   "mac_filter": []
 }

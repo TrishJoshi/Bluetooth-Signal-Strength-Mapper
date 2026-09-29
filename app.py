@@ -31,6 +31,7 @@ from session_store import (
     load_measurements_from_csv,
     measurements_to_csv_bytes,
     measurements_to_json_bytes,
+    save_measurements_csv,
     save_session_json,
 )
 
@@ -93,9 +94,11 @@ def _init_session_state() -> None:
         "measurements": [],              # list[Measurement]
         "selected_cell": GridCell(0, 0), # Ground-truth position
         "app_reported_cell": GridCell(0, 0),
-        "capture_state": "idle",         # "idle" | "awaiting_app_click"
+        "capture_state": "idle",         # "idle" | "awaiting_app_click" | "awaiting_beacon_info"
         "pending_scan_results": [],
         "pending_true_cell": None,
+        "pending_app_cell": None,
+        "show_overwrite_warning": False,
         "continuous_running": False,
         "continuous_settings": {},       # snapshot of config when started
         "continuous_next_scan_at": 0.0,  # Unix timestamp
@@ -165,11 +168,7 @@ def _continuous_fragment() -> None:
         scan_results=scan_results,
         scan_duration_seconds=float(scan_dur),
     )
-    st.session_state.measurements.append(measurement)
-
-    if campaign:
-        append_measurement_csv(campaign.measurements_csv_path, measurement)
-        _autosave_json(campaign)
+    _save_measurement(measurement, campaign)
 
     # Advance to the next cell.
     next_cell = selected.moved(direction)
@@ -389,9 +388,14 @@ def _show_campaign_screen() -> None:
                     clicked = GridCell(row, col)
                     
                     if st.session_state.capture_state == "awaiting_app_click":
-                        _finalize_capture(clicked, campaign)
+                        st.session_state.pending_app_cell = clicked
+                        st.session_state.capture_state = "awaiting_beacon_info"
+                        st.rerun()
+                    elif st.session_state.capture_state == "awaiting_beacon_info":
+                        st.session_state.pending_app_cell = clicked
                         st.rerun()
                     elif clicked != selected:
+                        st.session_state.show_overwrite_warning = False
                         st.session_state.selected_cell = clicked
                         st.rerun()
 
@@ -399,6 +403,32 @@ def _show_campaign_screen() -> None:
         if st.session_state.capture_state == "awaiting_app_click":
             st.warning("Waiting for app location...")
             if st.button(":material/cancel: Cancel Capture", type="secondary", use_container_width=True):
+                st.session_state.capture_state = "idle"
+                st.rerun()
+        elif st.session_state.capture_state == "awaiting_beacon_info":
+            st.subheader("📍 Beacon Overhead?")
+            st.write("Is there a physical beacon installed on the ceiling in this cell?")
+            has_beacon = st.radio("Beacon present?", ["No", "Yes"], horizontal=True, label_visibility="collapsed")
+            
+            major, minor, b_id = None, None, ""
+            if has_beacon == "Yes":
+                b_id = st.text_input("Beacon ID (optional)")
+                c1, c2 = st.columns(2)
+                major = c1.number_input("Major (dec)", min_value=0, step=1, value=0)
+                minor = c2.number_input("Minor (dec)", min_value=0, step=1, value=0)
+                
+            if st.button(":material/save: Save Measurement", type="primary", use_container_width=True):
+                _finalize_capture(
+                    st.session_state.pending_app_cell, 
+                    campaign,
+                    overhead=(has_beacon == "Yes"),
+                    major=int(major) if major else None,
+                    minor=int(minor) if minor else None,
+                    b_id=b_id
+                )
+                st.rerun()
+                
+            if st.button("Cancel Capture", type="secondary", use_container_width=True):
                 st.session_state.capture_state = "idle"
                 st.rerun()
         else:
@@ -430,8 +460,31 @@ def _show_campaign_screen() -> None:
     
             # --- Capture ---
             st.subheader("Capture")
-            if st.button(":material/sensors: Capture snapshot", type="primary", key="capture_btn"):
-                _run_capture(selected, app_reported, scan_duration, mac_filter, campaign)
+            
+            has_existing = any(m.true_grid == selected for m in st.session_state.measurements)
+            
+            if st.session_state.get("show_overwrite_warning"):
+                st.warning(f"⚠️ Cell {selected} already has a measurement. Overwrite it?")
+                ow_c1, ow_c2 = st.columns(2)
+                if ow_c1.button("Yes, Overwrite", type="primary", use_container_width=True):
+                    st.session_state.show_overwrite_warning = False
+                    _run_capture(selected, app_reported, scan_duration, mac_filter, campaign)
+                if ow_c2.button("Cancel", use_container_width=True):
+                    st.session_state.show_overwrite_warning = False
+                    st.rerun()
+            else:
+                cap_col, undo_col = st.columns([4, 1])
+                with cap_col:
+                    if st.button(":material/sensors: Capture", type="primary", key="capture_btn", use_container_width=True):
+                        if has_existing:
+                            st.session_state.show_overwrite_warning = True
+                            st.rerun()
+                        else:
+                            _run_capture(selected, app_reported, scan_duration, mac_filter, campaign)
+                with undo_col:
+                    num_measurements = len(st.session_state.measurements)
+                    if st.button(":material/undo:", help="Delete last measurement", key="undo_btn", disabled=(num_measurements == 0)):
+                        _undo_last_measurement(campaign)
 
         st.divider()
 
@@ -589,6 +642,10 @@ def _render_results_table(
     with dl3:
         if st.button(":material/delete: Clear measurements"):
             st.session_state.measurements = []
+            if campaign:
+                save_measurements_csv(st.session_state.measurements, campaign.measurements_csv_path)
+                _autosave_json(campaign)
+            st.session_state["_bg_cache_key"] = None
             st.rerun()
 
 
@@ -688,6 +745,7 @@ def _advanced_slider(
 
 
 def _move_selected(direction: str, max_rows: int, max_cols: int) -> None:
+    st.session_state.show_overwrite_warning = False
     new_cell = st.session_state.selected_cell.moved(direction)
     if new_cell.is_valid(max_rows, max_cols):
         st.session_state.selected_cell = new_cell
@@ -711,7 +769,34 @@ def _run_capture(
     st.rerun()
 
 
-def _finalize_capture(app_cell: GridCell, campaign: Campaign | None) -> None:
+def _save_measurement(measurement: Measurement, campaign: Campaign | None) -> None:
+    """Save measurement, overwriting any existing data for the same true_grid cell."""
+    existing = any(m.true_grid == measurement.true_grid for m in st.session_state.measurements)
+    
+    if existing:
+        st.session_state.measurements = [
+            m for m in st.session_state.measurements 
+            if m.true_grid != measurement.true_grid
+        ]
+        st.session_state.measurements.append(measurement)
+        if campaign:
+            save_measurements_csv(st.session_state.measurements, campaign.measurements_csv_path)
+            _autosave_json(campaign)
+    else:
+        st.session_state.measurements.append(measurement)
+        if campaign:
+            append_measurement_csv(campaign.measurements_csv_path, measurement)
+            _autosave_json(campaign)
+
+
+def _finalize_capture(
+    app_cell: GridCell,
+    campaign: Campaign | None,
+    overhead: bool = False,
+    major: Optional[int] = None,
+    minor: Optional[int] = None,
+    b_id: str = ""
+) -> None:
     scan_results = st.session_state.pending_scan_results
     true_cell = st.session_state.pending_true_cell
     scan_duration = st.session_state.get("scan_duration_s_cache", 3)
@@ -722,16 +807,32 @@ def _finalize_capture(app_cell: GridCell, campaign: Campaign | None) -> None:
         app_reported_grid=GridCell(app_cell.row, app_cell.col),
         scan_results=scan_results,
         scan_duration_seconds=float(scan_duration),
+        beacon_overhead=overhead,
+        beacon_major=major,
+        beacon_minor=minor,
+        beacon_id=b_id,
     )
-    st.session_state.measurements.append(measurement)
-
-    if campaign:
-        append_measurement_csv(campaign.measurements_csv_path, measurement)
-        _autosave_json(campaign)
+    _save_measurement(measurement, campaign)
 
     st.session_state.app_reported_cell = app_cell
     st.session_state.capture_state = "idle"
     st.success(f":material/check_circle: Captured {len(scan_results)} device(s) at {true_cell} (App: {app_cell}).")
+
+
+def _undo_last_measurement(campaign: Campaign | None) -> None:
+    if not st.session_state.measurements:
+        return
+        
+    popped = st.session_state.measurements.pop()
+    
+    if campaign:
+        # Overwrite CSV and JSON with the new list
+        save_measurements_csv(st.session_state.measurements, campaign.measurements_csv_path)
+        _autosave_json(campaign)
+        
+    st.info(f":material/undo: Removed measurement at {popped.true_grid}")
+    st.session_state["_bg_cache_key"] = None # force background redraw to remove color
+    st.rerun()
 
 
 def _autosave_json(campaign: Campaign) -> None:

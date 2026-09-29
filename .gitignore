@@ -8,3 +8,4 @@ uploads/
 measurements_*.csv
 session_*.json
 .agents/skills/developing-with-streamlit
+campaigns/
